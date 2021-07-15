@@ -7,7 +7,7 @@ export default class Point extends TreeNode {
     super(props)
   }
 
-  get pressure(): number {
+  calcPressure(): number {
     let min = Infinity
     const selectLowerPressure = (n: PipeSegment | Point) => {
       if (n !== this) min = Math.min(min, n.pressure)
@@ -15,6 +15,10 @@ export default class Point extends TreeNode {
     postOrder(this, selectLowerPressure)
 
     return min
+  }
+
+  get pressure(): number {
+    return this.calcPressure()
   }
 
   get flowrate(): number {

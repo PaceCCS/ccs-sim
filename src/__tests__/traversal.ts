@@ -6,8 +6,8 @@ describe('postOrder', () => {
     const root = new TreeNode({ name: 'parent', value: 1 })
     const child = new TreeNode({ name: 'child', value: 10 })
     const child2 = new TreeNode({ name: 'child2', value: 10 })
-    root.addChildNode(child)
-    root.addChildNode(child2)
+    root.addSource(child)
+    root.addSource(child2)
 
     let sum = 0
     postOrder(root, (n: TreeNode) => (sum += n.value))
@@ -19,8 +19,8 @@ describe('postOrder', () => {
     const root = new TreeNode({ name: 'parent', value: 1 })
     const child = new TreeNode({ name: 'child', value: 2 })
     const child2 = new TreeNode({ name: 'child2', value: 3 })
-    root.addChildNode(child)
-    root.addChildNode(child2)
+    root.addSource(child)
+    root.addSource(child2)
 
     let order = ''
     postOrder(root, (n: TreeNode) => (order += n.value))
@@ -32,12 +32,12 @@ describe('postOrder', () => {
     const root = new TreeNode({ name: 'parent', value: 1 })
     const child = new TreeNode({ name: 'child', value: 2 })
     const child2 = new TreeNode({ name: 'child2', value: 3 })
-    root.addChildNode(child)
-    root.addChildNode(child2)
+    root.addSource(child)
+    root.addSource(child2)
     const grandchild = new TreeNode({ name: 'grandchild', value: 4 })
     const grandchild2 = new TreeNode({ name: 'grandchild', value: 5 })
-    child.addChildNode(grandchild)
-    child.addChildNode(grandchild2)
+    child.addSource(grandchild)
+    child.addSource(grandchild2)
 
     let order = ''
     postOrder(root, (n: TreeNode) => (order += n.value))

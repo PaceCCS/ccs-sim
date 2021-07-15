@@ -37,7 +37,7 @@ describe('sources', () => {
     const tn = new TreeNode()
     const tnChild = new TreeNode()
 
-    tn.addChildNode(tnChild)
+    tn.addSource(tnChild)
 
     expect(tn.sources).toContain(tnChild)
   })

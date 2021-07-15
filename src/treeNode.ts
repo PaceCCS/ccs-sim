@@ -17,6 +17,7 @@ export default class TreeNode {
   }
 
   addSource(node: TreeNode) {
+    node.destination = this
     this.sources.push(node)
   }
 }

@@ -41,4 +41,13 @@ describe('sources', () => {
 
     expect(tn.sources).toContain(tnChild)
   })
+
+  it('should become the destination of its source nodes', () => {
+    const tn = new TreeNode()
+    const tnChild = new TreeNode()
+
+    tn.addSource(tnChild)
+
+    expect(tnChild.destination).toBe(tn)
+  })
 })

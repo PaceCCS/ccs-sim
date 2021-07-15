@@ -108,12 +108,12 @@ export default class PipeSegment extends TreeNode {
     super.addSource(node)
 
     let minChildPressure = this.properties.start.pressure
-    const selectLowerPressure = (node: PipeSegment) => {
+    const selectLowerPressure = (n: PipeSegment) => {
       const a = minChildPressure
-      const b = node.pressure || minChildPressure
+      const b = n.pressure || minChildPressure
       const lower = Math.min(a, b)
 
-      if (node !== this) minChildPressure = Math.min(minChildPressure, node.pressure)
+      if (n !== this) minChildPressure = Math.min(minChildPressure, n.pressure)
     }
     postOrder(this, selectLowerPressure)
 

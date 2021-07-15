@@ -1,9 +1,9 @@
 import TreeNode from './treeNode'
 
-export function postOrder(node: TreeNode | null, cb: Function) {
+export function postOrder(node: TreeNode | null, cb: (...args: any[]) => void) {
   if (!node) return
 
-  for (let child of node.sources) {
+  for (const child of node.sources) {
     postOrder(child, cb)
   }
 

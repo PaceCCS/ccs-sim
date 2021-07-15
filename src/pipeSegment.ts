@@ -100,6 +100,10 @@ export default class PipeSegment extends TreeNode {
     return this.properties.start.temperature
   }
 
+  get flowrate(): number {
+    return this.inflow()
+  }
+
   pressureContinuity(): boolean {
     return (this.destination as PipeSegment).properties.start.pressure === this.pressure
   }

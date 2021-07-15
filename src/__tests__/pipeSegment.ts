@@ -235,6 +235,20 @@ describe('common interface', () => {
 
     expect(ps.pressure).toBe(9999443.064800411)
   })
+
+  test('flowrate getter should return inflow', () => {
+    const root = new PipeSegment({ name: 'parent' })
+    const child = new PipeSegment({ name: 'child' })
+    const child2 = new PipeSegment({ name: 'child2' })
+    root.addSource(child)
+    root.addSource(child2)
+    const grandchild = new PipeSegment({ name: 'grandchild', flowrate: 4 })
+    const grandchild2 = new PipeSegment({ name: 'grandchild', flowrate: 5 })
+    child.addSource(grandchild)
+    child.addSource(grandchild2)
+
+    expect(root.flowrate).toBe(9)
+  })
 })
 
 describe('pressure continuity', () => {

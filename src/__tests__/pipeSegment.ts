@@ -36,3 +36,33 @@ describe('sources', () => {
     expect(ps.sources).toContain(ps2)
   })
 })
+
+describe('inflow', () => {
+  it('should sum the flow rates of its child nodes (1)', () => {
+    const root = new PipeSegment({ name: 'parent' })
+    const child = new PipeSegment({ name: 'child' })
+    const child2 = new PipeSegment({ name: 'child2' })
+    root.addSource(child)
+    root.addSource(child2)
+    const grandchild = new PipeSegment({ name: 'grandchild', flowrate: 4 })
+    const grandchild2 = new PipeSegment({ name: 'grandchild', flowrate: 5 })
+    child.addSource(grandchild)
+    child.addSource(grandchild2)
+
+    expect(root.inflow()).toBe(9)
+  })
+
+  it('should sum the flow rates of its child nodes (1)', () => {
+    const root = new PipeSegment({ name: 'parent' })
+    const child = new PipeSegment({ name: 'child' })
+    const child2 = new PipeSegment({ name: 'child2', flowrate: 10 })
+    root.addSource(child)
+    root.addSource(child2)
+    const grandchild = new PipeSegment({ name: 'grandchild', flowrate: 4 })
+    const grandchild2 = new PipeSegment({ name: 'grandchild' })
+    child.addSource(grandchild)
+    child.addSource(grandchild2)
+
+    expect(root.inflow()).toBe(14)
+  })
+})

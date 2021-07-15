@@ -2,27 +2,75 @@ import PipeSegment from '../pipeSegment'
 
 describe('constructor', () => {
   it('should set the value of the node', () => {
-    const ps = new PipeSegment({ name: 'PipeSegment' })
-
+    const ps = new PipeSegment()
     expect(ps.value).toBe(0)
   })
 
-  it('should have a default name', () => {
-    const ps = new PipeSegment()
+  it('should set the name of the node', () => {
+    const ps = new PipeSegment({ name: 'namedpipeseg' })
+    expect(ps.name).toBe('namedpipeseg')
+  })
 
+  it('should set diameter', () => {
+    const ps = new PipeSegment({ name: 'pseg', diameter: 1 })
+    expect(ps.properties.diameter).toBe(1)
+  })
+
+  it('should set length', () => {
+    const ps = new PipeSegment({ name: 'pseg', length: 1 })
+    expect(ps.properties.length).toBe(1)
+  })
+
+  it('should set flowrate', () => {
+    const ps = new PipeSegment({ name: 'pseg', flowrate: 1 })
+    expect(ps.properties.flowrate).toBe(1)
+  })
+
+  it('should set roughness', () => {
+    const ps = new PipeSegment({ name: 'pseg', roughness: 1 })
+    expect(ps.properties.roughness).toBe(1)
+  })
+})
+
+describe('constructor - defaults', () => {
+  it('name = pipeseg', () => {
+    const ps = new PipeSegment()
     expect(ps.name).toBe('pipeseg')
   })
 
-  it('should set the name of the node', () => {
-    const ps = new PipeSegment({ name: 'namepipeseg' })
-
-    expect(ps.name).toBe('namepipeseg')
+  it('properties.diameter = 2', () => {
+    const ps = new PipeSegment()
+    expect(ps.properties.diameter).toBe(2)
   })
 
-  it('should have no sourced by default', () => {
+  it('no sources', () => {
     const ps = new PipeSegment()
-
     expect(ps.sources.length).toBe(0)
+  })
+
+  it('properties.length = 200', () => {
+    const ps = new PipeSegment()
+    expect(ps.properties.length).toBe(200)
+  })
+
+  it('properties.flowrate = 0', () => {
+    const ps = new PipeSegment()
+    expect(ps.properties.flowrate).toBe(0)
+  })
+
+  it('properties.start.pressure = 2e6', () => {
+    const ps = new PipeSegment()
+    expect(ps.properties.start.pressure).toBe(2e6)
+  })
+
+  it('properties.start.viscosity = 0', () => {
+    const ps = new PipeSegment()
+    expect(ps.properties.start.viscosity).toBe(0)
+  })
+
+  it('properties.start.x = 0', () => {
+    const ps = new PipeSegment()
+    expect(ps.properties.start.x).toBe(0)
   })
 })
 
@@ -52,7 +100,7 @@ describe('inflow', () => {
     expect(root.inflow()).toBe(9)
   })
 
-  it('should sum the flow rates of its child nodes (1)', () => {
+  it('should sum the flow rates of its child nodes (2)', () => {
     const root = new PipeSegment({ name: 'parent' })
     const child = new PipeSegment({ name: 'child' })
     const child2 = new PipeSegment({ name: 'child2', flowrate: 10 })
@@ -66,3 +114,7 @@ describe('inflow', () => {
     expect(root.inflow()).toBe(14)
   })
 })
+
+// describe('pressureDrop', () => {
+//   it('should calculate pressure drop')
+// })

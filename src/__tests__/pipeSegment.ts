@@ -30,6 +30,31 @@ describe('constructor', () => {
     const ps = new PipeSegment({ name: 'pseg', roughness: 1 })
     expect(ps.properties.roughness).toBe(1)
   })
+
+  it('should set pressure', () => {
+    const ps = new PipeSegment({ name: 'pseg', start: { pressure: 1 } })
+    expect(ps.properties.start.pressure).toBe(1)
+  })
+
+  it('should set viscosity', () => {
+    const ps = new PipeSegment({ name: 'pseg', start: { viscosity: 1 } })
+    expect(ps.properties.start.viscosity).toBe(1)
+  })
+
+  it('should set temperature', () => {
+    const ps = new PipeSegment({ name: 'pseg', start: { temperature: 1 } })
+    expect(ps.properties.start.temperature).toBe(1)
+  })
+
+  it('should set x', () => {
+    const ps = new PipeSegment({ name: 'pseg', start: { x: 1 } })
+    expect(ps.properties.start.x).toBe(1)
+  })
+
+  it('should set y', () => {
+    const ps = new PipeSegment({ name: 'pseg', start: { y: 1 } })
+    expect(ps.properties.start.y).toBe(1)
+  })
 })
 
 describe('constructor - defaults', () => {
@@ -68,13 +93,23 @@ describe('constructor - defaults', () => {
     expect(ps.properties.start.viscosity).toBe(0)
   })
 
+  it('properties.start.temperature = 10', () => {
+    const ps = new PipeSegment()
+    expect(ps.properties.start.temperature).toBe(10)
+  })
+
   it('properties.start.x = 0', () => {
     const ps = new PipeSegment()
     expect(ps.properties.start.x).toBe(0)
   })
+
+  it('properties.start.y = 0', () => {
+    const ps = new PipeSegment()
+    expect(ps.properties.start.y).toBe(0)
+  })
 })
 
-describe('sources', () => {
+describe('addSource', () => {
   it('should add a node to the list of sources', () => {
     const ps = new PipeSegment()
     const ps2 = new PipeSegment()
@@ -82,6 +117,21 @@ describe('sources', () => {
     ps.addSource(ps2)
 
     expect(ps.sources).toContain(ps2)
+  })
+
+  it('should set this.destination.properties.start.pressure to the lower value', () => {
+    const rootPs = new PipeSegment({ name: 'root', start: { pressure: 10000000, temperature: 300 } })
+    const ps = new PipeSegment({
+      name: 'drop',
+      start: { pressure: 10000000, temperature: 300 },
+      length: 200,
+      diameter: 0.9144,
+      flowrate: 200,
+    })
+
+    rootPs.addSource(ps)
+
+    expect(ps.pressureContinuity()).toBe(true)
   })
 })
 
@@ -100,7 +150,7 @@ describe('inflow', () => {
     expect(root.inflow()).toBe(9)
   })
 
-  it('should sum the flow rates of its child nodes (2)', () => {
+  it('should sum the flow rates of its child nodes (2) - grandchildren', () => {
     const root = new PipeSegment({ name: 'parent' })
     const child = new PipeSegment({ name: 'child' })
     const child2 = new PipeSegment({ name: 'child2', flowrate: 10 })
@@ -115,6 +165,114 @@ describe('inflow', () => {
   })
 })
 
-// describe('pressureDrop', () => {
-//   it('should calculate pressure drop')
-// })
+describe('pressure drop', () => {
+  it('should calculate pressure drop (1/3)', () => {
+    const ps = new PipeSegment({
+      name: 'drop',
+      start: { pressure: 100000, temperature: 300 },
+      length: 200,
+      diameter: 0.9144,
+      flowrate: 150,
+    })
+
+    expect(ps.endPressure()).toBe(61111.81128965647)
+  })
+
+  it('should calculate pressure drop (2/3)', () => {
+    const ps = new PipeSegment({
+      name: 'drop',
+      start: { pressure: 300000, temperature: 350 },
+      length: 200,
+      diameter: 0.9144,
+      flowrate: 100,
+    })
+
+    expect(ps.endPressure()).toBe(294535.73943407804)
+  })
+
+  it('should calculate pressure drop (3/3)', () => {
+    const ps = new PipeSegment({
+      name: 'drop',
+      start: { pressure: 10000000, temperature: 300 },
+      length: 200,
+      diameter: 0.9144,
+      flowrate: 200,
+    })
+
+    expect(ps.endPressure()).toBe(9999443.064800411)
+  })
+
+  test('this.pressureDrop should return the difference', () => {
+    const ps = new PipeSegment({
+      name: 'drop',
+      start: { pressure: 10000000, temperature: 300 },
+      length: 200,
+      diameter: 0.9144,
+      flowrate: 200,
+    })
+
+    const diff = 10000000 - 9999443.064800411
+
+    expect(ps.pressureDrop).toBe(diff)
+  })
+})
+
+describe('common interface', () => {
+  test('temperature getter should return start temp', () => {
+    const ps = new PipeSegment()
+
+    expect(ps.temperature).toBe(10)
+  })
+
+  test('pressure getter should return end pressure', () => {
+    const ps = new PipeSegment({
+      name: 'drop',
+      start: { pressure: 10000000, temperature: 300 },
+      length: 200,
+      diameter: 0.9144,
+      flowrate: 200,
+    })
+
+    expect(ps.pressure).toBe(9999443.064800411)
+  })
+})
+
+describe('pressure continuity', () => {
+  it('should return true when the destination pipe has only one source', () => {
+    const rootPs = new PipeSegment({ name: 'root', start: { pressure: 10000000, temperature: 300 } })
+    const ps = new PipeSegment({
+      name: 'drop',
+      start: { pressure: 10000000, temperature: 300 },
+      length: 200,
+      diameter: 0.9144,
+      flowrate: 200,
+    })
+
+    rootPs.addSource(ps)
+
+    expect(ps.pressureContinuity()).toBe(true)
+  })
+
+  it('should return false when the destination is connected to a lower pressure source', () => {
+    const rootPs = new PipeSegment({ name: 'root', start: { pressure: 10000000, temperature: 300 } })
+    const ps = new PipeSegment({
+      name: 'drop',
+      start: { pressure: 10000000, temperature: 300 },
+      length: 200,
+      diameter: 0.9144,
+      flowrate: 200,
+    })
+    const ps_low = new PipeSegment({
+      name: 'drop',
+      start: { pressure: 1000000, temperature: 300 },
+      length: 200,
+      diameter: 0.9144,
+      flowrate: 200,
+    })
+
+    rootPs.addSource(ps)
+    rootPs.addSource(ps_low)
+
+    expect(ps.pressureContinuity()).toBe(false)
+  })
+})

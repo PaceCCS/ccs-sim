@@ -41,5 +41,9 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  }
 }

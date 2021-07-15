@@ -1,0 +1,19 @@
+{
+  "name": "ccs-sim",
+  "version": "1.0.0",
+  "description": "Modelling CCS systems",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jerell/ccs-sim.git"
+  },
+  "author": "Jerell James <jerell1998@gmail.com> (https://jerell.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jerell/ccs-sim/issues"
+  },
+  "homepage": "https://github.com/Jerell/ccs-sim#readme"
+}

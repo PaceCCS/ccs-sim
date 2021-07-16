@@ -16,6 +16,10 @@ export default class Valve extends Point {
     return this.inPressure / this.outPressure + 5
   }
 
+  get pressure(): number {
+    return this.outPressure
+  }
+
   get inPressure(): number {
     return super.calcPressure()
   }

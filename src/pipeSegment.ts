@@ -110,7 +110,6 @@ export default class PipeSegment extends Point {
 
   addSource(node: Point) {
     super.addSource(node)
-
     this.properties.start.pressure = this.calcPressure()
   }
 }

@@ -1,4 +1,4 @@
-import TreeNode from './treeNode'
+import Point from './point'
 import { postOrder } from './traversal'
 
 interface IPipeSeg {
@@ -16,7 +16,7 @@ interface IPipeSeg {
   }
 }
 
-export default class PipeSegment extends TreeNode {
+export default class PipeSegment extends Point {
   properties: {
     diameter: number
     length: number
@@ -108,15 +108,9 @@ export default class PipeSegment extends TreeNode {
     return (this.destination as PipeSegment).properties.start.pressure === this.pressure
   }
 
-  addSource(node: TreeNode) {
+  addSource(node: Point) {
     super.addSource(node)
 
-    let lowestPressure = this.properties.start.pressure
-    const selectLowerPressure = (n: PipeSegment) => {
-      if (n !== this) lowestPressure = Math.min(lowestPressure, n.pressure)
-    }
-    postOrder(this, selectLowerPressure)
-
-    this.properties.start.pressure = lowestPressure
+    this.properties.start.pressure = this.calcPressure()
   }
 }

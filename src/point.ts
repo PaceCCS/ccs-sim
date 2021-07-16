@@ -1,6 +1,5 @@
 import TreeNode from './treeNode'
 import { postOrder } from './traversal'
-import PipeSegment from './pipeSegment'
 
 export default class Point extends TreeNode {
   constructor(props?: any) {
@@ -9,7 +8,7 @@ export default class Point extends TreeNode {
 
   calcPressure(): number {
     let min = Infinity
-    const selectLowerPressure = (n: PipeSegment | Point) => {
+    const selectLowerPressure = (n: Point) => {
       if (n !== this) min = Math.min(min, n.pressure)
     }
     postOrder(this, selectLowerPressure)
@@ -23,7 +22,7 @@ export default class Point extends TreeNode {
 
   get flowrate(): number {
     let sum = 0
-    const addFlow = (n: PipeSegment | Point) => {
+    const addFlow = (n: Point) => {
       if (n !== this) sum += n.flowrate
     }
     postOrder(this, addFlow)

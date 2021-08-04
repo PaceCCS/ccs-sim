@@ -18,7 +18,10 @@ describe('constructor', () => {
 describe('sources', () => {
   it('should accept a pipe segment as a source', () => {
     const v = new Valve({ outPressure: 10 })
-    const p = new PipeSegment({ name: 'pressurePipe', start: { pressure: 100 } })
+    const p = new PipeSegment({
+      name: 'pressurePipe',
+      start: { pressure: 100 },
+    })
     v.addSource(p)
 
     expect(v.sources).toContain(p)

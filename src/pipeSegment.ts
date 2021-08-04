@@ -59,7 +59,10 @@ export default class PipeSegment extends Point {
     // ρ=(Pμ)/(RT)
     const μ = 0.044
     const R = 8.31462
-    return Number((this.properties.start.pressure * μ) / (R * this.properties.start.temperature))
+    return Number(
+      (this.properties.start.pressure * μ) /
+        (R * this.properties.start.temperature),
+    )
   }
 
   viscosity(): number {
@@ -85,7 +88,11 @@ export default class PipeSegment extends Point {
     const Re = (ρ * u * D) / μ
     const f = Re < 2000 ? 64 / Re : 0.094 / (D * 1000) ** (1 / 3)
 
-    return (A * Math.sqrt(D)) ** -1 * Math.sqrt(P1) * Math.sqrt(A ** 2 * D * P1 - f * L * v * w ** 2)
+    return (
+      (A * Math.sqrt(D)) ** -1 *
+      Math.sqrt(P1) *
+      Math.sqrt(A ** 2 * D * P1 - f * L * v * w ** 2)
+    )
   }
 
   get pressureDrop(): number {
@@ -105,7 +112,10 @@ export default class PipeSegment extends Point {
   }
 
   pressureContinuity(): boolean {
-    return (this.destination as PipeSegment).properties.start.pressure === this.pressure
+    return (
+      (this.destination as PipeSegment).properties.start.pressure ===
+      this.pressure
+    )
   }
 
   addSource(node: Point) {

@@ -120,7 +120,10 @@ describe('addSource', () => {
   })
 
   it('should set this.destination.properties.start.pressure to the lower value', () => {
-    const rootPs = new PipeSegment({ name: 'root', start: { pressure: 10000000, temperature: 300 } })
+    const rootPs = new PipeSegment({
+      name: 'root',
+      start: { pressure: 10000000, temperature: 300 },
+    })
     const ps = new PipeSegment({
       name: 'drop',
       start: { pressure: 10000000, temperature: 300 },
@@ -253,7 +256,10 @@ describe('common interface', () => {
 
 describe('pressure continuity', () => {
   it('should return true when the destination pipe has only one source', () => {
-    const rootPs = new PipeSegment({ name: 'root', start: { pressure: 10000000, temperature: 300 } })
+    const rootPs = new PipeSegment({
+      name: 'root',
+      start: { pressure: 10000000, temperature: 300 },
+    })
     const ps = new PipeSegment({
       name: 'drop',
       start: { pressure: 10000000, temperature: 300 },
@@ -268,7 +274,10 @@ describe('pressure continuity', () => {
   })
 
   it('should return false when the destination is connected to a lower pressure source', () => {
-    const rootPs = new PipeSegment({ name: 'root', start: { pressure: 10000000, temperature: 300 } })
+    const rootPs = new PipeSegment({
+      name: 'root',
+      start: { pressure: 10000000, temperature: 300 },
+    })
     const ps = new PipeSegment({
       name: 'drop',
       start: { pressure: 10000000, temperature: 300 },

@@ -59,7 +59,6 @@ export default class Splitter implements IElement {
 
     while (pressureSolution !== PressureSolution.Ok) {
       if (guesses++ > maxGuesses) {
-        console.log(`max guesses (${maxGuesses}) reached`)
         break
       }
 

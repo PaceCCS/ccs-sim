@@ -33,7 +33,10 @@
   },
   "homepage": "https://github.com/Jerell/ccs-sim#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.14.9",
+    "@babel/preset-typescript": "^7.14.5",
     "@types/jest": "^26.0.24",
+    "babel-jest": "^27.0.6",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
     "ts-jest": "^27.0.3",

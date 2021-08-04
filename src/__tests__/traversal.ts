@@ -2,6 +2,13 @@ import { postOrder } from '../traversal'
 import TreeNode from '../treeNode'
 
 describe('postOrder', () => {
+  it('should return immediately when the node argument is falsy', () => {
+    const mock = jest.fn()
+
+    postOrder(null, mock)
+
+    expect(mock).not.toHaveBeenCalled()
+  })
   it('should visit each node', () => {
     const root = new TreeNode({ name: 'parent', value: 1 })
     const child = new TreeNode({ name: 'child', value: 10 })

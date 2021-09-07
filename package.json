@@ -1,6 +1,6 @@
 {
   "name": "ccs-sim",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "Modelling CCS systems",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

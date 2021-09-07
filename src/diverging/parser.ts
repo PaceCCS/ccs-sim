@@ -168,7 +168,7 @@ const OLGA = {
       const transformed = {
         [instructionType]: {
           name: (params.LABEL as string[])[0],
-          length: length,
+          length,
           elevation: y,
           diameters: params.DIAMETER ? [params.DIAMETER[0]] : undefined,
         } as PipeSegInstruction | PipeSeriesInstruction,
@@ -188,13 +188,13 @@ const OLGA = {
       }
 
       const maxSegLength = 200;
-      const reduceToMaxLengthArr = (length: number) => {
-        if (length < maxSegLength) return [length];
+      const reduceToMaxLengthArr = (len: number) => {
+        if (len < maxSegLength) return [len];
 
         const lengths: number[] = [];
 
         const sum = () => lengths.reduce((acc, a) => acc + a, 0);
-        const remainder = () => length - sum();
+        const remainder = () => len - sum();
 
         while (remainder() >= maxSegLength) {
           lengths.push(maxSegLength);
@@ -227,7 +227,7 @@ const OLGA = {
         elevations.unshift(startElevation);
         elevations.pop();
 
-        transformed.pipeseries = <PipeSeriesInstruction>{
+        transformed.pipeseries = {
           n: seriesLengths.length,
           pipeDef: {
             name: (transformed.pipeseg as PipeSegInstruction).name,
@@ -239,7 +239,7 @@ const OLGA = {
           },
           elevations,
           lengths: seriesLengths,
-        };
+        } as PipeSeriesInstruction;
 
         delete transformed.pipeseg;
       }
@@ -266,7 +266,9 @@ export default class Parser {
   data: any;
   keyPoints: IElement[] = [];
   fluid?: Fluid;
-  constructor() {}
+  constructor() {
+    // do nothing
+  }
 
   readFile(fileName: string, save = false) {
     const file = fs.readFileSync(fileName, 'utf-8');

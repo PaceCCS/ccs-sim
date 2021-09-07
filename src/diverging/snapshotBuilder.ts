@@ -14,7 +14,6 @@ import {
   Flowrate,
   FlowrateUnits,
 } from 'physical-quantities';
-import getEnumKeyByEnumValue from '../utils/getEnumKeyByEnumValue';
 
 export default class SnapshotBuilder {
   elements: IElement[] = [];
@@ -23,7 +22,9 @@ export default class SnapshotBuilder {
   selectedSplitter?: Splitter;
   previousElem?: IElement;
   fluid?: Fluid;
-  constructor() {}
+  constructor() {
+    // do nothing
+  }
 
   private set = (elem: IElement, isKey = false) => {
     if (!this.elements.length) {

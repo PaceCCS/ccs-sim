@@ -2,19 +2,12 @@ import Fluid from './fluid';
 import Transport from './transport';
 import { defaultFluidConstructor } from './fluid';
 import IElement, { IPhysicalElement, PressureSolution } from './element';
-import {
-  Pressure,
-  PressureUnits,
-  Temperature,
-  TemperatureUnits,
-  Flowrate,
-  FlowrateUnits,
-} from 'physical-quantities';
+import { Pressure, PressureUnits } from 'physical-quantities';
 
 export type ModelFunction = {
   split: number;
   intercept: number;
-  powers: Array<number[]>;
+  powers: number[][];
   coefficients: number[];
 };
 

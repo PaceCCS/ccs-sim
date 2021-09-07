@@ -2,6 +2,8 @@ import IPhaseEnvelopeFileReader from './phaseEnvelopeFileReader';
 import { Pressure, Temperature } from 'physical-quantities';
 import IFluidPropertiesFileReader from './fluidDataFileReader';
 import boundarySearch from '../utils/boundarySearch';
+import FluidData, { FluidDatum } from './fluidData';
+import PhaseData, { PhaseDatum } from './phaseData';
 
 type xyDatumPoints = {
   x0y0: FluidDatum;
@@ -92,7 +94,6 @@ export default class FluidProperties {
         return Phase.Gas;
       }
 
-      console.log(maxDewPressure, pressure.pascal);
       throw new Error('Out of range');
     }
     const leftIdx = rightIdx - 1;
@@ -235,48 +236,6 @@ export default class FluidProperties {
     );
 
     return selectValuesAndAverage(points, colIdx, weights);
-  }
-}
-
-export type FluidDatum = [
-  PT: number,
-  TM: number,
-  HG: number,
-  VISG: number,
-  VISHL: number,
-  ROG: number,
-  ROHL: number,
-];
-
-export class FluidData {
-  data: FluidDatum[];
-  uniquePressures: number[] = [];
-  groupedByPressure: { [PT: number]: FluidDatum[] } = {};
-
-  constructor(data: FluidDatum[]) {
-    this.data = data;
-    data.forEach((datum) => {
-      if (!this.groupedByPressure[datum[0]]) {
-        this.groupedByPressure[datum[0]] = [];
-      }
-      this.groupedByPressure[datum[0]].push(datum);
-
-      if (!this.uniquePressures.includes(Number(datum[0]))) {
-        this.uniquePressures.push(Number(datum[0]));
-      }
-    });
-  }
-}
-
-export type PhaseDatum = [temp: number, bubble: number, dew: number];
-
-export class PhaseData {
-  // Assume Celsius and Pascal for this constructor
-  //TODO: assume kelvin when data provided
-  data: PhaseDatum[];
-
-  constructor(data: PhaseDatum[]) {
-    this.data = data;
   }
 }
 

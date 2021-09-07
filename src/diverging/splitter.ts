@@ -8,13 +8,6 @@ import {
   Flowrate,
   FlowrateUnits,
 } from 'physical-quantities';
-
-const fs = require('fs');
-
-const stream2 = fs.createWriteStream(`${__dirname}/out.txt`, {
-  flags: 'a',
-});
-
 export default class Splitter extends Transport {
   source: PipeSeg;
   destinations: IElement[] = [];
@@ -76,7 +69,6 @@ export default class Splitter extends Transport {
 
     while (pressureSolution !== PressureSolution.Ok) {
       if (guesses++ > maxGuesses - 1) {
-        console.log(`max guesses (${maxGuesses}) reached`);
         break;
       }
 

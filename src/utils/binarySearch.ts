@@ -12,7 +12,7 @@ export default function binarySearch(list: number[], item: number) {
   let low = 0;
   let high = list.length - 1;
   let mid = 0;
-  let best_index = low;
+  let bestIndex = low;
 
   while (low <= high) {
     mid = Math.floor((low + high) / 2);
@@ -22,17 +22,17 @@ export default function binarySearch(list: number[], item: number) {
     } else if (list[mid] > item) {
       high = mid - 1;
     } else {
-      best_index = mid;
+      bestIndex = mid;
       break;
     }
 
-    const diff_b = Math.abs(list[best_index] - item);
-    const diff_m = Math.abs(list[mid] - item);
+    const diffB = Math.abs(list[bestIndex] - item);
+    const diffM = Math.abs(list[mid] - item);
 
-    if ((best_index < mid && diff_m <= diff_b) || diff_m < diff_b) {
-      best_index = mid;
+    if ((bestIndex < mid && diffM <= diffB) || diffM < diffB) {
+      bestIndex = mid;
     }
   }
 
-  return best_index;
+  return bestIndex;
 }

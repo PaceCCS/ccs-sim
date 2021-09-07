@@ -1,12 +1,10 @@
-import { FluidData, FluidDatum } from './fluidProperties';
-
-const csv = require('csv-parser');
-const fs = require('fs');
+import FluidData, { FluidDatum } from './fluidData';
+import * as fs from 'fs';
+import * as csv from 'csv-parser';
 
 export default interface IFluidPropertiesFileReader {
   readFluidProperties(): Promise<FluidData>;
 }
-
 export class FluidDataFileReader implements IFluidPropertiesFileReader {
   fileName: string;
 
@@ -22,7 +20,7 @@ export class FluidDataFileReader implements IFluidPropertiesFileReader {
           .on('error', (error: any) => {
             reject(error);
           })
-          .pipe(csv())
+          .pipe(csv.default())
           .on('data', (row: any) => {
             const rowData = Object.values(row).map((value) =>
               Number(value),

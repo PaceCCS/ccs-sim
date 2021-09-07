@@ -29,10 +29,6 @@ export default class Reservoir implements IElement {
     }
     this.fluid = fluid;
 
-    // stream.write(
-    // 	`${this.name}: ${this.fluid.pressure.bara} Bara | ${this.fluid.flowrate.kgps} kg/s\n`
-    // );
-
     const upper = this.pressure.pascal * 1.01;
     const lower = this.pressure.pascal * 0.99;
 

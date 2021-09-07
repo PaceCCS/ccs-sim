@@ -1,22 +1,9 @@
-import Fluid, { defaultFluidConstructor } from './fluid';
-import Inlet from './inlet';
-import Parser from './parser';
-import Perforation from './perforation';
-import PipeSeg from './pipeSeg';
-import Reservoir from './reservoir';
-import SnapshotBuilder from './snapshotBuilder';
-import Splitter from './splitter';
-import Well from './well';
-
-export default {
-  Fluid,
-  defaultFluidConstructor,
-  Inlet,
-  Parser,
-  Perforation,
-  PipeSeg,
-  Reservoir,
-  SnapshotBuilder,
-  Splitter,
-  Well,
-};
+export { default as Fluid, defaultFluidConstructor } from './fluid';
+export { default as Inlet } from './inlet';
+export { default as Parser } from './parser';
+export { default as Perforation } from './perforation';
+export { default as PipeSeg } from './pipeSeg';
+export { default as Reservoir } from './reservoir';
+export { default as SnapshotBuilder } from './snapshotBuilder';
+export { default as Splitter } from './splitter';
+export { default as Well } from './well';

@@ -49,7 +49,6 @@ const perforationFunctions = {
 };
 
 export default class Perforation extends Analogue {
-  source?: Well;
   destination: Reservoir | null;
 
   constructor(

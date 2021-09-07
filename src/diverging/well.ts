@@ -46,7 +46,6 @@ const wellFunctions = {
 };
 
 export default class Well extends Analogue {
-  source?: PipeSeg;
   destination: IElement | null;
 
   constructor(

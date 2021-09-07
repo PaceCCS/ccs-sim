@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "module": "esnext",

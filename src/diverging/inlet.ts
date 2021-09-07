@@ -11,14 +11,12 @@ import {
 } from 'physical-quantities';
 
 export default class Inlet extends Transport {
-  fluid: Fluid | null;
   destination: IElement | null;
   temperature: Temperature = new Temperature(10, TemperatureUnits.Kelvin);
 
   constructor(name: string, physical: IPhysicalElement) {
     super(name, physical, 'Inlet');
 
-    this.fluid = null;
     this.destination = null;
   }
 

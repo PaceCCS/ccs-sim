@@ -10,6 +10,7 @@ export default abstract class Transport implements ITransport {
   name: string;
   physical: IPhysicalElement;
   type: string;
+  fluid?: Fluid;
 
   constructor(name: string, physical: IPhysicalElement, type: string) {
     this.name = name;

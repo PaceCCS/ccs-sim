@@ -11,7 +11,6 @@ export interface IPipeDefinition extends IPhysicalElement {
 }
 
 export default class PipeSeg extends Transport {
-  fluid?: Fluid;
   physical: IPipeDefinition;
   _source: IElement | null;
   destination: IElement | null;

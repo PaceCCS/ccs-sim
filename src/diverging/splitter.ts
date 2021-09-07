@@ -11,7 +11,6 @@ import {
 export default class Splitter extends Transport {
   source: PipeSeg;
   destinations: IElement[] = [];
-  fluid?: Fluid;
 
   constructor(name: string, physical: IPhysicalElement, source: PipeSeg) {
     super(name, physical, 'Splitter');

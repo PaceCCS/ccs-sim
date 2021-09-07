@@ -12,7 +12,6 @@ export type ModelFunction = {
 };
 
 export default class Analogue extends Transport {
-  fluid: Fluid | null;
   source?: IElement;
   destination: IElement | null;
   modelFunction: ModelFunction;
@@ -25,7 +24,6 @@ export default class Analogue extends Transport {
   ) {
     super(name, physical, type);
 
-    this.fluid = null;
     this.destination = null;
     this.modelFunction = modelFunction;
   }

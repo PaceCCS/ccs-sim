@@ -1,9 +1,10 @@
 import fs from 'fs';
 import YAML from 'yaml';
-import IElement, { IPhysicalElement } from './element';
+import { IPhysicalElement } from './element';
 import { IPipeDefinition } from './pipeSeg';
 import SnapshotBuilder from './snapshotBuilder';
 import Fluid from './fluid';
+import Transport from './transport';
 
 const OLGA = {
   parse: (fileString: string) => {
@@ -264,7 +265,7 @@ const OLGA = {
 
 export default class Parser {
   data: any;
-  keyPoints: IElement[] = [];
+  keyPoints: Transport[] = [];
   fluid?: Fluid;
   constructor() {
     // do nothing

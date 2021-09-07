@@ -1,7 +1,2 @@
-import Diverging from './diverging';
-import Converging from './converging';
-
-export default {
-  Diverging,
-  Converging,
-};
+export { default as Diverging } from './diverging';
+export { default as Converging } from './converging';

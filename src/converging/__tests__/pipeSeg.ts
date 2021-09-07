@@ -1,7 +1,7 @@
 import PipeSeg from '../pipeSeg';
 import Fluid from '../fluid';
 
-describe('effectiveArea', () =>
+describe('effectiveArea', () => {
   it('should calculate the effectiveArea', () => {
     const pipeseg = new PipeSeg({
       length: 1,
@@ -11,7 +11,8 @@ describe('effectiveArea', () =>
     });
 
     expect(pipeseg.effectiveArea).toBeCloseTo(468.097305385);
-  }));
+  });
+});
 
 describe('removeLine', () => {
   it('should change the returned value of effectiveArea', () => {

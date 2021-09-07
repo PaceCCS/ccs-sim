@@ -1,0 +1,32 @@
+--- # two splitter model
+instructions:
+  - inlet:
+     name: 'start'
+     physical:
+      elevation: 0
+  - pipeseg: 
+     name: 'inletpipe'
+     length: 200
+     elevation: 0
+     diameters: 
+       - 1
+       - 2
+       - 3
+       - 4
+  - splitter:
+     name: 'split1'
+     physical: 
+      elevation: 0
+  - pipeseg:
+     name: 's1-s2'
+     length: 200
+     elevation: 0
+     diameters: 
+       - 1
+       - 2
+       - 3
+       - 4
+  - splitter:
+     name: 'split2'
+     physical:
+      elevation: 0

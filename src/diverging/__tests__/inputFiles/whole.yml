@@ -1,0 +1,3551 @@
+instructions:
+  # - setfluid:
+  #     pressure: 1
+  #     temperature: 1
+  #     flowrate: 1
+  - inlet:
+      name: POA-DG
+      physical:
+        elevation: 4.14
+  - pipeseg:
+      name: POAtoDG-001
+      length: 4.14
+      elevation: 4.14
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-002
+      length: 80.6568943116458
+      elevation: 2.75
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-003
+      length: 43.25830556089778
+      elevation: 2.43
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-004
+      length: 51.9045017315454
+      elevation: 2.78
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-005
+      length: 100.81434917708886
+      elevation: 2.99
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-006
+      length: 103.69340625131382
+      elevation: 3
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-007
+      length: 103.69340625131376
+      elevation: 3
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-008
+      length: 28.952735622044433
+      elevation: 2.97
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-009
+      length: 2.87
+      elevation: 2.87
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-010
+      length: 3.546730889142842
+      elevation: 2.07
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-011
+      length: 69.11204019561282
+      elevation: 1.29
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-012
+      length: 48.9567360023112
+      elevation: 1.28
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-013
+      length: 54.72166846871542
+      elevation: 1.13
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-014
+      length: 95.01809143526299
+      elevation: 1.24
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-015
+      length: 40.340562712981644
+      elevation: 1.57
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-016
+      length: 63.39794712764751
+      elevation: 2.71
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-017
+      length: 100.81833563395112
+      elevation: 2.78
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-018
+      length: 43.26811759251835
+      elevation: 2.76
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-019
+      length: 57.65186033425106
+      elevation: 2.67
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-020
+      length: 46.17284158463733
+      elevation: 3.08
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-021
+      length: 54.77471679525126
+      elevation: 2.86
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-022
+      length: 100.8100119035805
+      elevation: 2.84
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-023
+      length: 11.88185591563875
+      elevation: 2.91
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-024
+      length: 26.0110015185881
+      elevation: 2.29
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-025
+      length: 34.595308930547176
+      elevation: 1.77
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-026
+      length: 20.29305299850181
+      elevation: 2.32
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-027
+      length: 43.291996950937765
+      elevation: 2.97
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-028
+      length: 72.05198678731908
+      elevation: 3.22
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-029
+      length: 97.94493606103367
+      elevation: 3.28
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-030
+      length: 60.58373131460297
+      elevation: 3.87
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-031
+      length: 77.79369961635712
+      elevation: 2.89
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-032
+      length: 37.53986947233574
+      elevation: 2.87
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-033
+      length: 54.82570291387064
+      elevation: 3.56
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-034
+      length: 66.33949653110132
+      elevation: 3.98
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-035
+      length: 112.38582517381803
+      elevation: 4.64
+      diameters:
+        - 0.4572
+  - pipeseg:
+      name: POAtoDG-036
+      length: 96.21996570358975
+      elevation: 5.37
+      diameters:
+        - 0.4572
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-37
+        length: 500.03575912128525
+        elevation: 5.98
+        diameters:
+          - 0.4668
+      elevations:
+        - 5.98
+        - 5.5881
+        - 5.1961
+      lengths:
+        - 200
+        - 200
+        - 100.03575912128525
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-38
+        length: 560.0223209837266
+        elevation: 5
+        diameters:
+          - 0.4668
+      elevations:
+        - 5
+        - 4.5322
+        - 4.0644
+      lengths:
+        - 200
+        - 200
+        - 160.02232098372656
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-39
+        length: 480.0141832279542
+        elevation: 3.69
+        diameters:
+          - 0.4668
+      elevations:
+        - 3.69
+        - -1.268
+        - -6.2261
+      lengths:
+        - 200
+        - 200
+        - 80.01418322795422
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: POAtoDG-40
+        length: 240.14038415060472
+        elevation: -8.21
+        diameters:
+          - 0.4668
+      elevations:
+        - -8.21
+        - -9.8581
+      lengths:
+        - 200
+        - 40.14038415060472
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: POAtoDG-41
+        length: 330.1572899392046
+        elevation: -10.19
+        diameters:
+          - 0.4668
+      elevations:
+        - -10.19
+        - -7.7378
+      lengths:
+        - 200
+        - 130.1572899392046
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-42
+        length: 450.0418864950239
+        elevation: -6.14
+        diameters:
+          - 0.4668
+      elevations:
+        - -6.14
+        - -3.3805
+        - -0.621
+      lengths:
+        - 200
+        - 200
+        - 50.0418864950239
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-43
+        length: 490.000005
+        elevation: 0.07
+        diameters:
+          - 0.4668
+      elevations:
+        - 0.07
+        - 0.0006
+        - -0.0688
+      lengths:
+        - 200
+        - 200
+        - 90.00000499999999
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-44
+        length: 510.0000098039215
+        elevation: -0.1
+        diameters:
+          - 0.4668
+      elevations:
+        - -0.1
+        - -1.1471
+        - -2.1941
+      lengths:
+        - 200
+        - 200
+        - 110.0000098039215
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-45
+        length: 510.0075223955035
+        elevation: -2.77
+        diameters:
+          - 0.4668
+      elevations:
+        - -2.77
+        - -4.4641
+        - -6.1581
+      lengths:
+        - 200
+        - 200
+        - 110.00752239550349
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-46
+        length: 480.0523597483924
+        elevation: -7.09
+        diameters:
+          - 0.4668
+      elevations:
+        - -7.09
+        - -7.7357
+        - -8.3814
+      lengths:
+        - 200
+        - 200
+        - 80.0523597483924
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-47
+        length: 510.073180631956
+        elevation: -8.64
+        diameters:
+          - 0.4668
+      elevations:
+        - -8.64
+        - -8.4361
+        - -8.2323
+      lengths:
+        - 200
+        - 200
+        - 110.073180631956
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-48
+        length: 480.06867675364947
+        elevation: -8.12
+        diameters:
+          - 0.4668
+      elevations:
+        - -8.12
+        - -8.12
+        - -8.12
+      lengths:
+        - 200
+        - 200
+        - 80.06867675364947
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-49
+        length: 520.0633945972356
+        elevation: -8.12
+        diameters:
+          - 0.4668
+      elevations:
+        - -8.12
+        - -8.22
+        - -8.32
+      lengths:
+        - 200
+        - 200
+        - 120.06339459723563
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-50
+        length: 510.0688428045767
+        elevation: -8.38
+        diameters:
+          - 0.4668
+      elevations:
+        - -8.38
+        - -8.4466
+        - -8.5133
+      lengths:
+        - 200
+        - 200
+        - 110.06884280457672
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-51
+        length: 450.08121767076665
+        elevation: -8.55
+        diameters:
+          - 0.4668
+      elevations:
+        - -8.55
+        - -8.59
+        - -8.63
+      lengths:
+        - 200
+        - 200
+        - 50.08121767076665
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-52
+        length: 510.073180631956
+        elevation: -8.64
+        diameters:
+          - 0.4668
+      elevations:
+        - -8.64
+        - -8.6047
+        - -8.5694
+      lengths:
+        - 200
+        - 200
+        - 110.073180631956
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-53
+        length: 540.0676832583116
+        elevation: -8.55
+        diameters:
+          - 0.4668
+      elevations:
+        - -8.55
+        - -8.6463
+        - -8.7425
+      lengths:
+        - 200
+        - 200
+        - 140.0676832583116
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-54
+        length: 480.0808432962099
+        elevation: -8.81
+        diameters:
+          - 0.4668
+      elevations:
+        - -8.81
+        - -8.9516
+        - -9.0932
+      lengths:
+        - 200
+        - 200
+        - 80.08084329620988
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-55
+        length: 490.08542367632197
+        elevation: -9.15
+        diameters:
+          - 0.4668
+      elevations:
+        - -9.15
+        - -9.0806
+        - -9.0113
+      lengths:
+        - 200
+        - 200
+        - 90.08542367632197
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-56
+        length: 510.0790530888325
+        elevation: -8.98
+        diameters:
+          - 0.4668
+      elevations:
+        - -8.98
+        - -9.0819
+        - -9.1839
+      lengths:
+        - 200
+        - 200
+        - 110.0790530888325
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-57
+        length: 510.0836966616361
+        elevation: -9.24
+        diameters:
+          - 0.4668
+      elevations:
+        - -9.24
+        - -9.5105
+        - -9.781
+      lengths:
+        - 200
+        - 200
+        - 110.08369666163611
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-58
+        length: 480.10270245021536
+        elevation: -9.93
+        diameters:
+          - 0.4668
+      elevations:
+        - -9.93
+        - -10.0383
+        - -10.1466
+      lengths:
+        - 200
+        - 200
+        - 80.10270245021536
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-59
+        length: 480.1081504202985
+        elevation: -10.19
+        diameters:
+          - 0.4668
+      elevations:
+        - -10.19
+        - -10.1192
+        - -10.0484
+      lengths:
+        - 200
+        - 200
+        - 80.1081504202985
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-60
+        length: 540.0929553326908
+        elevation: -10.02
+        diameters:
+          - 0.4668
+      elevations:
+        - -10.02
+        - -10.02
+        - -10.02
+      lengths:
+        - 200
+        - 200
+        - 140.09295533269085
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-61
+        length: 480.104572358981
+        elevation: -10.02
+        diameters:
+          - 0.4668
+      elevations:
+        - -10.02
+        - -10.3407
+        - -10.6614
+      lengths:
+        - 200
+        - 200
+        - 80.10457235898099
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-62
+        length: 490.1187857040373
+        elevation: -10.79
+        diameters:
+          - 0.4668
+      elevations:
+        - -10.79
+        - -10.4759
+        - -10.1617
+      lengths:
+        - 200
+        - 200
+        - 90.1187857040373
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-63
+        length: 540.0929553326908
+        elevation: -10.02
+        diameters:
+          - 0.4668
+      elevations:
+        - -10.02
+        - -9.9237
+        - -9.8275
+      lengths:
+        - 200
+        - 200
+        - 140.09295533269085
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-64
+        length: 450.1058293335024
+        elevation: -9.76
+        diameters:
+          - 0.4668
+      elevations:
+        - -9.76
+        - -10.3331
+        - -10.9061
+      lengths:
+        - 200
+        - 200
+        - 50.10582933350241
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-65
+        length: 510.119694287527
+        elevation: -11.05
+        diameters:
+          - 0.4668
+      elevations:
+        - -11.05
+        - -11.0147
+        - -10.9794
+      lengths:
+        - 200
+        - 200
+        - 110.11969428752701
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-66
+        length: 510.1177526806924
+        elevation: -10.96
+        diameters:
+          - 0.4668
+      elevations:
+        - -10.96
+        - -11.0972
+        - -11.2344
+      lengths:
+        - 200
+        - 200
+        - 110.11775268069238
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-67
+        length: 480.1332274483823
+        elevation: -11.31
+        diameters:
+          - 0.4668
+      elevations:
+        - -11.31
+        - -11.2392
+        - -11.1684
+      lengths:
+        - 200
+        - 200
+        - 80.13322744838229
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-68
+        length: 520.1193128504267
+        elevation: -11.14
+        diameters:
+          - 0.4668
+      elevations:
+        - -11.14
+        - -11.436
+        - -11.732
+      lengths:
+        - 200
+        - 200
+        - 120.1193128504267
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-69
+        length: 480.14773570225236
+        elevation: -11.91
+        diameters:
+          - 0.4668
+      elevations:
+        - -11.91
+        - -11.5894
+        - -11.2687
+      lengths:
+        - 200
+        - 200
+        - 80.14773570225236
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-70
+        length: 540.1148948140572
+        elevation: -11.14
+        diameters:
+          - 0.4668
+      elevations:
+        - -11.14
+        - -11.6509
+        - -12.1618
+      lengths:
+        - 200
+        - 200
+        - 140.11489481405715
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-71
+        length: 510.15365371621124
+        elevation: -12.52
+        diameters:
+          - 0.4668
+      elevations:
+        - -12.52
+        - -13.0609
+        - -13.6017
+      lengths:
+        - 200
+        - 200
+        - 110.15365371621124
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-72
+        length: 480.2012182408537
+        elevation: -13.9
+        diameters:
+          - 0.4668
+      elevations:
+        - -13.9
+        - -13.5045
+        - -13.109
+      lengths:
+        - 200
+        - 200
+        - 80.20121824085368
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-73
+        length: 480.1746583275715
+        elevation: -12.95
+        diameters:
+          - 0.4668
+      elevations:
+        - -12.95
+        - -12.7335
+        - -12.517
+      lengths:
+        - 200
+        - 200
+        - 80.17465832757148
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-74
+        length: 490.157632706051
+        elevation: -12.43
+        diameters:
+          - 0.4668
+      elevations:
+        - -12.43
+        - -12.7808
+        - -13.1316
+      lengths:
+        - 200
+        - 200
+        - 90.157632706051
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-75
+        length: 540.1635160763822
+        elevation: -13.29
+        diameters:
+          - 0.4668
+      elevations:
+        - -13.29
+        - -13.2604
+        - -13.2308
+      lengths:
+        - 200
+        - 200
+        - 140.16351607638217
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-76
+        length: 510.1710537653033
+        elevation: -13.21
+        diameters:
+          - 0.4668
+      elevations:
+        - -13.21
+        - -13.4804
+        - -13.7508
+      lengths:
+        - 200
+        - 200
+        - 110.17105376530333
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-77
+        length: 450.2146265949164
+        elevation: -13.9
+        diameters:
+          - 0.4668
+      elevations:
+        - -13.9
+        - -14.8546
+        - -15.8093
+      lengths:
+        - 200
+        - 200
+        - 50.21462659491641
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-78
+        length: 510.25248896992167
+        elevation: -16.05
+        diameters:
+          - 0.4668
+      elevations:
+        - -16.05
+        - -16.3869
+        - -16.7238
+      lengths:
+        - 200
+        - 200
+        - 110.25248896992167
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-79
+        length: 480.29777024258607
+        elevation: -16.91
+        diameters:
+          - 0.4668
+      elevations:
+        - -16.91
+        - -16.91
+        - -16.91
+      lengths:
+        - 200
+        - 200
+        - 80.29777024258607
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-80
+        length: 550.2598914149568
+        elevation: -16.91
+        diameters:
+          - 0.4668
+      elevations:
+        - -16.91
+        - -16.9427
+        - -16.9754
+      lengths:
+        - 200
+        - 200
+        - 150.25989141495677
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-81
+        length: 480.30094732365455
+        elevation: -17
+        diameters:
+          - 0.4668
+      elevations:
+        - -17
+        - -17
+        - -17
+      lengths:
+        - 200
+        - 200
+        - 80.30094732365455
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-82
+        length: 480.30094732365455
+        elevation: -17
+        diameters:
+          - 0.4668
+      elevations:
+        - -17
+        - -17.5743
+        - -18.1486
+      lengths:
+        - 200
+        - 200
+        - 80.30094732365455
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-83
+        length: 540.3127098264486
+        elevation: -18.38
+        diameters:
+          - 0.4668
+      elevations:
+        - -18.38
+        - -18.0619
+        - -17.7437
+      lengths:
+        - 200
+        - 200
+        - 140.31270982644855
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-84
+        length: 510.30084303281336
+        elevation: -17.52
+        diameters:
+          - 0.4668
+      elevations:
+        - -17.52
+        - -18.1585
+        - -18.7969
+      lengths:
+        - 200
+        - 200
+        - 110.30084303281336
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-85
+        length: 480.3818507187798
+        elevation: -19.15
+        diameters:
+          - 0.4668
+      elevations:
+        - -19.15
+        - -19.6534
+        - -20.1567
+      lengths:
+        - 200
+        - 200
+        - 80.38185071877979
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-86
+        length: 520.3984335103248
+        elevation: -20.36
+        diameters:
+          - 0.4668
+      elevations:
+        - -20.36
+        - -20.625
+        - -20.89
+      lengths:
+        - 200
+        - 200
+        - 120.39843351032482
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-87
+        length: 480.46134339819685
+        elevation: -21.05
+        diameters:
+          - 0.4668
+      elevations:
+        - -21.05
+        - -21.2663
+        - -21.4825
+      lengths:
+        - 200
+        - 200
+        - 80.46134339819685
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-88
+        length: 480.4844065107629
+        elevation: -21.57
+        diameters:
+          - 0.4668
+      elevations:
+        - -21.57
+        - -21.8902
+        - -22.2104
+      lengths:
+        - 200
+        - 200
+        - 80.48440651076288
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-89
+        length: 510.48905531852495
+        elevation: -22.34
+        diameters:
+          - 0.4668
+      elevations:
+        - -22.34
+        - -22.7823
+        - -23.2246
+      lengths:
+        - 200
+        - 200
+        - 110.48905531852495
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-90
+        length: 510.5397544755942
+        elevation: -23.47
+        diameters:
+          - 0.4668
+      elevations:
+        - -23.47
+        - -23.7713
+        - -24.0726
+      lengths:
+        - 200
+        - 200
+        - 110.53975447559418
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-91
+        length: 510.5757315031728
+        elevation: -24.24
+        diameters:
+          - 0.4668
+      elevations:
+        - -24.24
+        - -23.2266
+        - -22.2132
+      lengths:
+        - 200
+        - 200
+        - 110.57573150317279
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-92
+        length: 490.4780550646481
+        elevation: -21.65
+        diameters:
+          - 0.4668
+      elevations:
+        - -21.65
+        - -22.7051
+        - -23.7602
+      lengths:
+        - 200
+        - 200
+        - 90.47805506464812
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-93
+        length: 510.5757315031728
+        elevation: -24.24
+        diameters:
+          - 0.4668
+      elevations:
+        - -24.24
+        - -24.5452
+        - -24.8504
+      lengths:
+        - 200
+        - 200
+        - 110.57573150317279
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-94
+        length: 480.6516414202702
+        elevation: -25.02
+        diameters:
+          - 0.4668
+      elevations:
+        - -25.02
+        - -25.7347
+        - -26.4494
+      lengths:
+        - 200
+        - 200
+        - 80.65164142027021
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-95
+        length: 510.70052633612977
+        elevation: -26.74
+        diameters:
+          - 0.4668
+      elevations:
+        - -26.74
+        - -26.9434
+        - -27.1467
+      lengths:
+        - 200
+        - 200
+        - 110.70052633612977
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-96
+        length: 510.72801724597014
+        elevation: -27.26
+        diameters:
+          - 0.4668
+      elevations:
+        - -27.26
+        - -27.8309
+        - -28.4018
+      lengths:
+        - 200
+        - 200
+        - 110.72801724597014
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-97
+        length: 510.8080249956925
+        elevation: -28.72
+        diameters:
+          - 0.4668
+      elevations:
+        - -28.72
+        - -29.0601
+        - -29.4002
+      lengths:
+        - 200
+        - 200
+        - 110.8080249956925
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-98
+        length: 520.8412119830764
+        elevation: -29.59
+        diameters:
+          - 0.4668
+      elevations:
+        - -29.59
+        - -30.2149
+        - -30.8398
+      lengths:
+        - 200
+        - 200
+        - 120.84121198307639
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-99
+        length: 481.0142288955702
+        elevation: -31.22
+        diameters:
+          - 0.4668
+      elevations:
+        - -31.22
+        - -31.0416
+        - -30.8632
+      lengths:
+        - 200
+        - 200
+        - 81.01422889557023
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-100
+        length: 480.9865113493309
+        elevation: -30.79
+        diameters:
+          - 0.4668
+      elevations:
+        - -30.79
+        - -30.4705
+        - -30.151
+      lengths:
+        - 200
+        - 200
+        - 80.9865113493309
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: POAtoDG-101
+        length: 451.00022217289427
+        elevation: -30.02
+        diameters:
+          - 0.4668
+      elevations:
+        - -30.02
+        - -30.0112
+        - -30.0023
+      lengths:
+        - 200
+        - 200
+        - 51.00022217289427
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: POAtoDG-102
+        length: 202.23748416156684
+        elevation: -30
+        diameters:
+          - 0.4668
+      elevations:
+        - -30
+        - -29.2176
+      lengths:
+        - 200
+        - 2.23748416156684
+  - pipeseg:
+      name: POAtoDG-103
+      length: 31.203204963593084
+      elevation: -29.2
+      diameters:
+        - 0.4668
+  - pipeseg:
+      name: POAtoDG-104
+      length: 28.081310510729374
+      elevation: 0
+      diameters:
+        - 0.4668
+  - splitter:
+      name: 'Douglas Manifold'
+      physical:
+        elevation: 26.6
+  - branch:
+      name: DGtoHM-001
+      length: 26.6
+      elevation: 26.6
+      diameters:
+        - 0.4762
+  - pipeseg:
+      name: DGtoHM-002
+      length: 27.04163456597992
+      elevation: 25.5
+      diameters:
+        - 0.4762
+  - pipeseg:
+      name: DGtoHM-003
+      length: 27.77138815399763
+      elevation: 0
+      diameters:
+        - 0.4762
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHM-004
+        length: 281.5132723336504
+        elevation: -29.15
+        diameters:
+          - 0.4762
+      elevations:
+        - -29.15
+        - -28.5847
+      lengths:
+        - 200
+        - 81.51327233365038
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHM-005
+        length: 231.7406362725364
+        elevation: -28.35
+        diameters:
+          - 0.4762
+      elevations:
+        - -28.35
+        - -27.6391
+      lengths:
+        - 200
+        - 31.740636272536392
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHM-006
+        length: 261.4523864874826
+        elevation: -27.52
+        diameters:
+          - 0.4762
+      elevations:
+        - -27.52
+        - -27.733
+      lengths:
+        - 200
+        - 61.45238648748261
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHM-007
+        length: 251.54093106291865
+        elevation: -27.8
+        diameters:
+          - 0.4762
+      elevations:
+        - -27.8
+        - -26.5672
+      lengths:
+        - 200
+        - 51.540931062918645
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHM-008
+        length: 271.2720730189527
+        elevation: -26.24
+        diameters:
+          - 0.4762
+      elevations:
+        - -26.24
+        - -25.785
+      lengths:
+        - 200
+        - 71.27207301895271
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHM-009
+        length: 241.36359377503476
+        elevation: -25.62
+        diameters:
+          - 0.4762
+      elevations:
+        - -25.62
+        - -26.4439
+      lengths:
+        - 200
+        - 41.36359377503476
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-010
+        length: 510.6942572616222
+        elevation: -26.62
+        diameters:
+          - 0.4762
+      elevations:
+        - -26.62
+        - -26.972
+        - -27.324
+      lengths:
+        - 200
+        - 200
+        - 110.69425726162223
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-011
+        length: 490.7721980715697
+        elevation: -27.52
+        diameters:
+          - 0.4762
+      elevations:
+        - -27.52
+        - -26.7876
+        - -26.0552
+      lengths:
+        - 200
+        - 200
+        - 90.77219807156968
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-012
+        length: 510.6481356080721
+        elevation: -25.72
+        diameters:
+          - 0.4762
+      elevations:
+        - -25.72
+        - -26.3615
+        - -27.003
+      lengths:
+        - 200
+        - 200
+        - 110.6481356080721
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-013
+        length: 510.7333644867936
+        elevation: -27.36
+        diameters:
+          - 0.4762
+      elevations:
+        - -27.36
+        - -26.8008
+        - -26.2416
+      lengths:
+        - 200
+        - 200
+        - 110.73336448679362
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-014
+        length: 480.6998698772447
+        elevation: -25.93
+        diameters:
+          - 0.4762
+      elevations:
+        - -25.93
+        - -26.0214
+        - -26.1128
+      lengths:
+        - 200
+        - 200
+        - 80.69986987724468
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-015
+        length: 500.68335552522615
+        elevation: -26.15
+        diameters:
+          - 0.4762
+      elevations:
+        - -26.15
+        - -28.5754
+        - -31.0007
+      lengths:
+        - 200
+        - 200
+        - 100.68335552522615
+  - pipeseg:
+      name: DGtoHM-016
+      length: 133.93570435100568
+      elevation: -32.23
+      diameters:
+        - 0.4762
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHM-017
+        length: 381.271336583279
+        elevation: -31.11
+        diameters:
+          - 0.4762
+      elevations:
+        - -31.11
+        - -31.4341
+      lengths:
+        - 200
+        - 181.27133658327898
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-018
+        length: 491.026264979787
+        elevation: -31.73
+        diameters:
+          - 0.4762
+      elevations:
+        - -31.73
+        - -32.2868
+        - -32.8437
+      lengths:
+        - 200
+        - 200
+        - 91.02626497978702
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-019
+        length: 501.0944122618012
+        elevation: -33.1
+        diameters:
+          - 0.4762
+      elevations:
+        - -33.1
+        - -32.0884
+        - -31.0769
+      lengths:
+        - 200
+        - 200
+        - 101.09441226180121
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHM-020
+        length: 261.78982715147663
+        elevation: -30.56
+        diameters:
+          - 0.4762
+      elevations:
+        - -30.56
+        - -31.3112
+      lengths:
+        - 200
+        - 61.78982715147663
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHM-021
+        length: 242.06487250321968
+        elevation: -31.55
+        diameters:
+          - 0.4762
+      elevations:
+        - -31.55
+        - -30.6079
+      lengths:
+        - 200
+        - 42.064872503219675
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHM-022
+        length: 261.77119780449493
+        elevation: -30.4
+        diameters:
+          - 0.4762
+      elevations:
+        - -30.4
+        - -30.916
+      lengths:
+        - 200
+        - 61.77119780449493
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHM-023
+        length: 242.00406277581374
+        elevation: -31.08
+        diameters:
+          - 0.4762
+      elevations:
+        - -31.08
+        - -30.3424
+      lengths:
+        - 200
+        - 42.004062775813736
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-024
+        length: 490.9285410321954
+        elevation: -30.18
+        diameters:
+          - 0.4762
+      elevations:
+        - -30.18
+        - -30.3183
+        - -30.4565
+      lengths:
+        - 200
+        - 200
+        - 90.92854103219543
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-025
+        length: 510.91239014140183
+        elevation: -30.52
+        diameters:
+          - 0.4762
+      elevations:
+        - -30.52
+        - -30.3403
+        - -30.1605
+      lengths:
+        - 200
+        - 200
+        - 110.91239014140183
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-026
+        length: 490.92117860202364
+        elevation: -30.06
+        diameters:
+          - 0.4762
+      elevations:
+        - -30.06
+        - -29.2264
+        - -28.3928
+      lengths:
+        - 200
+        - 200
+        - 90.92117860202364
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-027
+        length: 500.78394552940694
+        elevation: -28.01
+        diameters:
+          - 0.4762
+      elevations:
+        - -28.01
+        - -27.8385
+        - -27.6671
+      lengths:
+        - 200
+        - 200
+        - 100.78394552940694
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-028
+        length: 510.74519713845575
+        elevation: -27.58
+        diameters:
+          - 0.4762
+      elevations:
+        - -27.58
+        - -27.5292
+        - -27.4783
+      lengths:
+        - 200
+        - 200
+        - 110.74519713845575
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-029
+        length: 490.7682778053203
+        elevation: -27.45
+        diameters:
+          - 0.4762
+      elevations:
+        - -27.45
+        - -27.9057
+        - -28.3614
+      lengths:
+        - 200
+        - 200
+        - 90.76827780532028
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHM-030
+        length: 500.8155797297045
+        elevation: -28.57
+        diameters:
+          - 0.4762
+      elevations:
+        - -28.57
+        - -28.881
+        - -29.192
+      lengths:
+        - 200
+        - 200
+        - 100.8155797297045
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHM-031
+        length: 281.5340521144822
+        elevation: -29.35
+        diameters:
+          - 0.4762
+      elevations:
+        - -29.35
+        - -28.7989
+      lengths:
+        - 200
+        - 81.53405211448222
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHM-032
+        length: 251.6271942775661
+        elevation: -28.57
+        diameters:
+          - 0.4762
+      elevations:
+        - -28.57
+        - -26.3826
+      lengths:
+        - 200
+        - 51.627194277566105
+  - pipeseg:
+      name: DGtoHM-033
+      length: 27.32471408816568
+      elevation: -25.8
+      diameters:
+        - 0.4762
+  - pipeseg:
+      name: DGtoHM-034
+      length: 10
+      elevation: 26.6
+      diameters:
+        - 0.4762
+  - pipeseg:
+      name: DGtoHM-035
+      length: 33.28002403845286
+      elevation: 26.6
+      diameters:
+        - 0.4762
+  - well:
+      name: HM1
+      physical:
+        elevation: 26.6
+      realReservoirName: Hamilton
+  - reservoir:
+      name: Hamilton
+      physical:
+        elevation: 0
+      pressure: 4000000
+  - branch:
+      name: DGtoHN-001
+      length: 26.6
+      elevation: 26.6
+      diameters:
+        - 0.3302
+  - pipeseg:
+      name: DGtoHN-002
+      length: 27.04163456597992
+      elevation: 25.5
+      diameters:
+        - 0.3302
+  - pipeseg:
+      name: DGtoHN-003
+      length: 11
+      elevation: 0
+      diameters:
+        - 0.3302
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-004
+        length: 251.84033056680974
+        elevation: -30.39
+        diameters:
+          - 0.3302
+      elevations:
+        - -30.39
+        - -29.4046
+      lengths:
+        - 200
+        - 51.84033056680974
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-005
+        length: 231.83860679360546
+        elevation: -29.14
+        diameters:
+          - 0.3302
+      elevations:
+        - -29.14
+        - -28.3098
+      lengths:
+        - 200
+        - 31.838606793605464
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-006
+        length: 271.4655574838178
+        elevation: -28.17
+        diameters:
+          - 0.3302
+      elevations:
+        - -28.17
+        - -28.3092
+      lengths:
+        - 200
+        - 71.4655574838178
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-007
+        length: 500.8036437567123
+        elevation: -28.36
+        diameters:
+          - 0.3302
+      elevations:
+        - -28.36
+        - -27.4549
+        - -26.5498
+      lengths:
+        - 200
+        - 200
+        - 100.80364375671229
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-008
+        length: 490.6940881037798
+        elevation: -26.09
+        diameters:
+          - 0.3302
+      elevations:
+        - -26.09
+        - -26.961
+        - -27.832
+      lengths:
+        - 200
+        - 200
+        - 90.69408810377979
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-009
+        length: 520.7657178616887
+        elevation: -28.23
+        diameters:
+          - 0.3302
+      elevations:
+        - -28.23
+        - -27.9807
+        - -27.7315
+      lengths:
+        - 200
+        - 200
+        - 120.7657178616887
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-010
+        length: 470.80851351690745
+        elevation: -27.58
+        diameters:
+          - 0.3302
+      elevations:
+        - -27.58
+        - -27.0584
+        - -26.5368
+      lengths:
+        - 200
+        - 200
+        - 70.80851351690745
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-011
+        length: 520.6671897671295
+        elevation: -26.35
+        diameters:
+          - 0.3302
+      elevations:
+        - -26.35
+        - -26.6838
+        - -27.0175
+      lengths:
+        - 200
+        - 200
+        - 120.66718976712946
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-012
+        length: 500.7403802371045
+        elevation: -27.22
+        diameters:
+          - 0.3302
+      elevations:
+        - -27.22
+        - -28.2968
+        - -29.3736
+      lengths:
+        - 200
+        - 200
+        - 100.74038023710449
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-013
+        length: 510.8768994581767
+        elevation: -29.92
+        diameters:
+          - 0.3302
+      elevations:
+        - -29.92
+        - -29.3885
+        - -28.857
+      lengths:
+        - 200
+        - 200
+        - 110.8768994581767
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-014
+        length: 490.83161430372434
+        elevation: -28.56
+        diameters:
+          - 0.3302
+      elevations:
+        - -28.56
+        - -28.7186
+        - -28.8773
+      lengths:
+        - 200
+        - 200
+        - 90.83161430372434
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-015
+        length: 510.8210082798083
+        elevation: -28.95
+        diameters:
+          - 0.3302
+      elevations:
+        - -28.95
+        - -29.7357
+        - -30.5214
+      lengths:
+        - 200
+        - 200
+        - 110.82100827980832
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-016
+        length: 480.99742369372416
+        elevation: -30.96
+        diameters:
+          - 0.3302
+      elevations:
+        - -30.96
+        - -31.1882
+        - -31.4164
+      lengths:
+        - 200
+        - 200
+        - 80.99742369372416
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-017
+        length: 500.99189624184544
+        elevation: -31.51
+        diameters:
+          - 0.3302
+      elevations:
+        - -31.51
+        - -30.7092
+        - -29.9084
+      lengths:
+        - 200
+        - 200
+        - 100.99189624184544
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-018
+        length: 500.86949398021835
+        elevation: -29.5
+        diameters:
+          - 0.3302
+      elevations:
+        - -29.5
+        - -29.1612
+        - -28.8224
+      lengths:
+        - 200
+        - 200
+        - 100.86949398021835
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-019
+        length: 490.83685935349234
+        elevation: -28.65
+        diameters:
+          - 0.3302
+      elevations:
+        - -28.65
+        - -27.6615
+        - -26.6731
+      lengths:
+        - 200
+        - 200
+        - 90.83685935349234
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-020
+        length: 520.6606268962538
+        elevation: -26.22
+        diameters:
+          - 0.3302
+      elevations:
+        - -26.22
+        - -26.2047
+        - -26.1893
+      lengths:
+        - 200
+        - 200
+        - 120.6606268962538
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-021
+        length: 490.698881596443
+        elevation: -26.18
+        diameters:
+          - 0.3302
+      elevations:
+        - -26.18
+        - -25.4148
+        - -24.6497
+      lengths:
+        - 200
+        - 200
+        - 90.69888159644302
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-022
+        length: 261.1330886731898
+        elevation: -24.3
+        diameters:
+          - 0.3302
+      elevations:
+        - -24.3
+        - -25.5659
+      lengths:
+        - 200
+        - 61.133088673189775
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-023
+        length: 251.34422929520383
+        elevation: -25.96
+        diameters:
+          - 0.3302
+      elevations:
+        - -25.96
+        - -24.3612
+      lengths:
+        - 200
+        - 51.34422929520383
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-024
+        length: 221.29872028550005
+        elevation: -23.94
+        diameters:
+          - 0.3302
+      elevations:
+        - -23.94
+        - -24.4072
+      lengths:
+        - 200
+        - 21.298720285500053
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-025
+        length: 271.1056834520442
+        elevation: -24.46
+        diameters:
+          - 0.3302
+      elevations:
+        - -24.46
+        - -24.482
+      lengths:
+        - 200
+        - 71.10568345204422
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-026
+        length: 470.6376101630638
+        elevation: -24.49
+        diameters:
+          - 0.3302
+      elevations:
+        - -24.49
+        - -25.4151
+        - -26.3403
+      lengths:
+        - 200
+        - 200
+        - 70.63761016306381
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-027
+        length: 291.2237780470544
+        elevation: -26.67
+        diameters:
+          - 0.3302
+      elevations:
+        - -26.67
+        - -25.2954
+      lengths:
+        - 200
+        - 91.2237780470544
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-028
+        length: 261.16683480105206
+        elevation: -24.66
+        diameters:
+          - 0.3302
+      elevations:
+        - -24.66
+        - -27.6333
+      lengths:
+        - 200
+        - 61.16683480105206
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-029
+        length: 241.69334620547585
+        elevation: -28.56
+        diameters:
+          - 0.3302
+      elevations:
+        - -28.56
+        - -26.4729
+      lengths:
+        - 200
+        - 41.69334620547585
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-030
+        length: 271.25088092022855
+        elevation: -26.02
+        diameters:
+          - 0.3302
+      elevations:
+        - -26.02
+        - -29.3814
+      lengths:
+        - 200
+        - 71.25088092022855
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-031
+        length: 480.97438601239463
+        elevation: -30.6
+        diameters:
+          - 0.3302
+      elevations:
+        - -30.6
+        - -30.8158
+        - -31.0316
+      lengths:
+        - 200
+        - 200
+        - 80.97438601239463
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-032
+        length: 261.8557893192358
+        elevation: -31.12
+        diameters:
+          - 0.3302
+      elevations:
+        - -31.12
+        - -29.5198
+      lengths:
+        - 200
+        - 61.85578931923578
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-033
+        length: 221.90443911738222
+        elevation: -29.01
+        diameters:
+          - 0.3302
+      elevations:
+        - -29.01
+        - -31.1635
+      lengths:
+        - 200
+        - 21.904439117382225
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-034
+        length: 281.7573715096022
+        elevation: -31.42
+        diameters:
+          - 0.3302
+      elevations:
+        - -31.42
+        - -29.72
+      lengths:
+        - 200
+        - 81.7573715096022
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoHN-035
+        length: 231.82230285285323
+        elevation: -29.01
+        diameters:
+          - 0.3302
+      elevations:
+        - -29.01
+        - -30.7904
+      lengths:
+        - 200
+        - 31.822302852853227
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-036
+        length: 500.9656556092443
+        elevation: -31.09
+        diameters:
+          - 0.3302
+      elevations:
+        - -31.09
+        - -31.2454
+        - -31.4008
+      lengths:
+        - 200
+        - 200
+        - 100.96565560924432
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-037
+        length: 510.97063555550824
+        elevation: -31.48
+        diameters:
+          - 0.3302
+      elevations:
+        - -31.48
+        - -30.2611
+        - -29.0422
+      lengths:
+        - 200
+        - 200
+        - 110.97063555550824
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-038
+        length: 490.82001752169805
+        elevation: -28.36
+        diameters:
+          - 0.3302
+      elevations:
+        - -28.36
+        - -27.1193
+        - -25.8785
+      lengths:
+        - 200
+        - 200
+        - 90.82001752169805
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoHN-039
+        length: 500.6401862615505
+        elevation: -25.31
+        diameters:
+          - 0.3302
+      elevations:
+        - -25.31
+        - -24.0293
+        - -22.7486
+      lengths:
+        - 200
+        - 200
+        - 100.64018626155053
+  - pipeseg:
+      name: DGtoHN-040
+      length: 23.503404008781366
+      elevation: -22.1
+      diameters:
+        - 0.3302
+  - pipeseg:
+      name: DGtoHN-041
+      length: 10
+      elevation: 26.3
+      diameters:
+        - 0.3302
+  - pipeseg:
+      name: DGtoHN-042
+      length: 33.04073243740217
+      elevation: 26.3
+      diameters:
+        - 0.3302
+  - well:
+      name: HN1
+      physical:
+        elevation: 26.3
+      realReservoirName: HamiltonNorth
+  - reservoir:
+      name: Hamilton North
+      physical:
+        elevation: 0
+      pressure: 4000000
+  - branch:
+      name: DGtoLX12-001
+      length: 26.6
+      elevation: 26.6
+      diameters:
+        - 0.2794
+        - 0.3302
+        - 0.3826
+  - pipeseg:
+      name: DGtoLX12-002
+      length: 27.04163456597992
+      elevation: 25.5
+      diameters:
+        - 0.2794
+        - 0.3302
+        - 0.3826
+  - pipeseg:
+      name: DGtoLX12-003
+      length: 11
+      elevation: 0
+      diameters:
+        - 0.2794
+        - 0.3302
+        - 0.3826
+  - pipeseries:
+      n: 4
+      pipeDef:
+        name: DGtoLX12-004
+        length: 620.6957261009617
+        elevation: -29.38
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -29.38
+        - -28.717
+        - -28.0539
+        - -27.3909
+      lengths:
+        - 200
+        - 200
+        - 200
+        - 20.69572610096168
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-005
+        length: 490.7610237172467
+        elevation: -27.32
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -27.32
+        - -26.8561
+        - -26.3923
+      lengths:
+        - 200
+        - 200
+        - 90.7610237172467
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-006
+        length: 490.698881596443
+        elevation: -26.18
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -26.18
+        - -25.6916
+        - -25.2032
+      lengths:
+        - 200
+        - 200
+        - 90.69888159644302
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-007
+        length: 420.742201829101
+        elevation: -24.98
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -24.98
+        - -26.1236
+        - -27.2671
+      lengths:
+        - 200
+        - 200
+        - 20.74220182910102
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-008
+        length: 590.6354307862
+        elevation: -27.39
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -27.39
+        - -26.8522
+        - -26.3144
+      lengths:
+        - 200
+        - 200
+        - 190.6354307862
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-009
+        length: 490.6787543800934
+        elevation: -25.8
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -25.8
+        - -26.4716
+        - -27.1432
+      lengths:
+        - 200
+        - 200
+        - 90.67875438009338
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-010
+        length: 520.7240175947331
+        elevation: -27.45
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -27.45
+        - -26.89
+        - -26.33
+      lengths:
+        - 200
+        - 200
+        - 120.72401759473314
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-011
+        length: 490.6887813064407
+        elevation: -25.99
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -25.99
+        - -26.3278
+        - -26.6657
+      lengths:
+        - 200
+        - 200
+        - 90.68878130644072
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-012
+        length: 520.6911871733571
+        elevation: -26.82
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -26.82
+        - -29.0525
+        - -31.285
+      lengths:
+        - 200
+        - 200
+        - 120.6911871733571
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-013
+        length: 560.9504163471134
+        elevation: -32.64
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -32.64
+        - -32.4158
+        - -32.1915
+      lengths:
+        - 200
+        - 200
+        - 160.95041634711345
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-014
+        length: 451.13705245745444
+        elevation: -32.01
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -32.01
+        - -32.3461
+        - -32.6822
+      lengths:
+        - 200
+        - 200
+        - 51.137052457454445
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-015
+        length: 421.27648035464784
+        elevation: -32.77
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -32.77
+        - -31.8092
+        - -30.8484
+      lengths:
+        - 200
+        - 200
+        - 21.276480354647845
+  - pipeseries:
+      n: 4
+      pipeDef:
+        name: DGtoLX12-016
+        length: 600.7869402708418
+        elevation: -30.74
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -30.74
+        - -30.74
+        - -30.74
+        - -30.74
+      lengths:
+        - 200
+        - 200
+        - 200
+        - 0.7869402708417965
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-017
+        length: 480.983313224066
+        elevation: -30.74
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -30.74
+        - -30.7151
+        - -30.6902
+      lengths:
+        - 200
+        - 200
+        - 80.98331322406602
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-018
+        length: 530.8872407583366
+        elevation: -30.68
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -30.68
+        - -30.6085
+        - -30.5371
+      lengths:
+        - 200
+        - 200
+        - 130.8872407583366
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-019
+        length: 590.7873052969233
+        elevation: -30.49
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -30.49
+        - -30.3615
+        - -30.2331
+      lengths:
+        - 200
+        - 200
+        - 190.78730529692325
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoLX12-020
+        length: 381.19104409731347
+        elevation: -30.11
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -30.11
+        - -28.9855
+      lengths:
+        - 200
+        - 181.19104409731347
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-021
+        length: 490.79706763590184
+        elevation: -27.96
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -27.96
+        - -27.4677
+        - -26.9755
+      lengths:
+        - 200
+        - 200
+        - 90.79706763590184
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-022
+        length: 530.6746295989662
+        elevation: -26.75
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -26.75
+        - -26.7989
+        - -26.8479
+      lengths:
+        - 200
+        - 200
+        - 130.67462959896625
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-023
+        length: 520.6942811285717
+        elevation: -26.88
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -26.88
+        - -26.7573
+        - -26.6345
+      lengths:
+        - 200
+        - 200
+        - 120.69428112857167
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-024
+        length: 560.6294976185252
+        elevation: -26.56
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -26.56
+        - -25.9756
+        - -25.3912
+      lengths:
+        - 200
+        - 200
+        - 160.6294976185252
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoLX12-025
+        length: 380.81623704878973
+        elevation: -24.92
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -24.92
+        - -24.7523
+      lengths:
+        - 200
+        - 180.81623704878973
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-026
+        length: 420.7198117512414
+        elevation: -24.6
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -24.6
+        - -23.4278
+        - -22.2557
+      lengths:
+        - 200
+        - 200
+        - 20.719811751241423
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-027
+        length: 590.4148853983951
+        elevation: -22.13
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -22.13
+        - -22.367
+        - -22.6039
+      lengths:
+        - 200
+        - 200
+        - 190.41488539839509
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-028
+        length: 420.6200291236736
+        elevation: -22.83
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -22.83
+        - -23.3713
+        - -23.9125
+      lengths:
+        - 200
+        - 200
+        - 20.62002912367359
+  - pipeseries:
+      n: 4
+      pipeDef:
+        name: DGtoLX12-029
+        length: 600.4786098605011
+        elevation: -23.97
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -23.97
+        - -23.737
+        - -23.5041
+        - -23.2711
+      lengths:
+        - 200
+        - 200
+        - 200
+        - 0.4786098605011375
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-030
+        length: 480.56372407829537
+        elevation: -23.27
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -23.27
+        - -22.4012
+        - -21.5324
+      lengths:
+        - 200
+        - 200
+        - 80.56372407829537
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-031
+        length: 460.4873422798937
+        elevation: -21.18
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -21.18
+        - -21.3752
+        - -21.5705
+      lengths:
+        - 200
+        - 200
+        - 60.48734227989371
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-032
+        length: 520.4496679795271
+        elevation: -21.63
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -21.63
+        - -21.3113
+        - -20.9926
+      lengths:
+        - 200
+        - 200
+        - 120.44966797952713
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-033
+        length: 560.386152576953
+        elevation: -20.8
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -20.8
+        - -20.7108
+        - -20.6217
+      lengths:
+        - 200
+        - 200
+        - 160.386152576953
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-034
+        length: 450.4689806190877
+        elevation: -20.55
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -20.55
+        - -20.4923
+        - -20.4347
+      lengths:
+        - 200
+        - 200
+        - 50.46898061908769
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-035
+        length: 530.393228086483
+        elevation: -20.42
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -20.42
+        - -20.2768
+        - -20.1336
+      lengths:
+        - 200
+        - 200
+        - 130.39322808648296
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-036
+        length: 480.41815286269104
+        elevation: -20.04
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -20.04
+        - -19.857
+        - -19.674
+      lengths:
+        - 200
+        - 200
+        - 80.41815286269104
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-037
+        length: 490.3918433253147
+        elevation: -19.6
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -19.6
+        - -19.4696
+        - -19.3392
+      lengths:
+        - 200
+        - 200
+        - 90.39184332531471
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-038
+        length: 490.37915779527174
+        elevation: -19.28
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -19.28
+        - -19.1537
+        - -19.0273
+      lengths:
+        - 200
+        - 200
+        - 90.37915779527174
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-039
+        length: 490.3670675116754
+        elevation: -18.97
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -18.97
+        - -18.864
+        - -18.7581
+      lengths:
+        - 200
+        - 200
+        - 90.36706751167537
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-040
+        length: 490.35707815835593
+        elevation: -18.71
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -18.71
+        - -18.5062
+        - -18.3024
+      lengths:
+        - 200
+        - 200
+        - 90.35707815835593
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-041
+        length: 490.3382547792901
+        elevation: -18.21
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -18.21
+        - -17.9247
+        - -17.6394
+      lengths:
+        - 200
+        - 200
+        - 90.33825477929008
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-042
+        length: 520.2947242669293
+        elevation: -17.51
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -17.51
+        - -17.218
+        - -16.926
+      lengths:
+        - 200
+        - 200
+        - 120.29472426692928
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-043
+        length: 560.2504462291841
+        elevation: -16.75
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -16.75
+        - -16.5466
+        - -16.3432
+      lengths:
+        - 200
+        - 200
+        - 160.25044622918415
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-044
+        length: 420.31154207325784
+        elevation: -16.18
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -16.18
+        - -15.8804
+        - -15.5809
+      lengths:
+        - 200
+        - 200
+        - 20.31154207325784
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-045
+        length: 520.2324504488354
+        elevation: -15.55
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -15.55
+        - -14.7699
+        - -13.9899
+      lengths:
+        - 200
+        - 200
+        - 120.23245044883538
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-046
+        length: 450.2030546320182
+        elevation: -13.52
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -13.52
+        - -13.0404
+        - -12.5609
+      lengths:
+        - 200
+        - 200
+        - 50.20305463201822
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-047
+        length: 560.1381558151525
+        elevation: -12.44
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.44
+        - -12.4864
+        - -12.5328
+      lengths:
+        - 200
+        - 200
+        - 160.13815581515246
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-048
+        length: 490.16120297306276
+        elevation: -12.57
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.57
+        - -12.57
+        - -12.57
+      lengths:
+        - 200
+        - 200
+        - 90.16120297306276
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-049
+        length: 520.151905600662
+        elevation: -12.57
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.57
+        - -12.57
+        - -12.57
+      lengths:
+        - 200
+        - 200
+        - 120.15190560066196
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-050
+        length: 460.1717124074447
+        elevation: -12.57
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.57
+        - -12.4614
+        - -12.3528
+      lengths:
+        - 200
+        - 200
+        - 60.171712407444716
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-051
+        length: 520.1459241405242
+        elevation: -12.32
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.32
+        - -12.32
+        - -12.32
+      lengths:
+        - 200
+        - 200
+        - 120.14592414052424
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-052
+        length: 450.1686155208957
+        elevation: -12.32
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.32
+        - -12.4044
+        - -12.4888
+      lengths:
+        - 200
+        - 200
+        - 50.168615520895685
+  - pipeseries:
+      n: 4
+      pipeDef:
+        name: DGtoLX12-053
+        length: 600.1304025793061
+        elevation: -12.51
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.51
+        - -12.7199
+        - -12.9298
+        - -13.1397
+      lengths:
+        - 200
+        - 200
+        - 200
+        - 0.13040257930606458
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-054
+        length: 450.1918031239574
+        elevation: -13.14
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -13.14
+        - -13.0823
+        - -13.0245
+      lengths:
+        - 200
+        - 200
+        - 50.19180312395741
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-055
+        length: 520.1627246352818
+        elevation: -13.01
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -13.01
+        - -12.8178
+        - -12.6256
+      lengths:
+        - 200
+        - 200
+        - 120.16272463528185
+  - pipeseries:
+      n: 2
+      pipeDef:
+        name: DGtoLX12-056
+        length: 390.2005895690062
+        elevation: -12.51
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.51
+        - -12.6073
+      lengths:
+        - 200
+        - 190.20058956900618
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-057
+        length: 560.1439904167498
+        elevation: -12.7
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.7
+        - -12.5644
+        - -12.4287
+      lengths:
+        - 200
+        - 200
+        - 160.14399041674983
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-058
+        length: 520.1459241405242
+        elevation: -12.32
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.32
+        - -12.27
+        - -12.2201
+      lengths:
+        - 200
+        - 200
+        - 120.14592414052424
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-059
+        length: 520.1428612410249
+        elevation: -12.19
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.19
+        - -12.263
+        - -12.3361
+      lengths:
+        - 200
+        - 200
+        - 120.14286124102489
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-060
+        length: 460.1665615839552
+        elevation: -12.38
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.38
+        - -12.38
+        - -12.38
+      lengths:
+        - 200
+        - 200
+        - 60.16656158395517
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-061
+        length: 520.1473487387973
+        elevation: -12.38
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.38
+        - -12.453
+        - -12.5261
+      lengths:
+        - 200
+        - 200
+        - 120.14734873879729
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-062
+        length: 450.17552676706003
+        elevation: -12.57
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.57
+        - -12.6277
+        - -12.6855
+      lengths:
+        - 200
+        - 200
+        - 50.175526767060035
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-063
+        length: 560.1439904167498
+        elevation: -12.7
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -12.7
+        - -11.4328
+        - -10.1656
+      lengths:
+        - 200
+        - 200
+        - 160.14399041674983
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-064
+        length: 490.08542367632197
+        elevation: -9.15
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -9.15
+        - -9.1786
+        - -9.2071
+      lengths:
+        - 200
+        - 200
+        - 90.08542367632197
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-065
+        length: 490.08673558871186
+        elevation: -9.22
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -9.22
+        - -9.2445
+        - -9.269
+      lengths:
+        - 200
+        - 200
+        - 90.08673558871186
+  - pipeseries:
+      n: 3
+      pipeDef:
+        name: DGtoLX12-066
+        length: 500.0861109848983
+        elevation: -9.28
+        diameters:
+          - 0.2794
+          - 0.3302
+          - 0.3826
+      elevations:
+        - -9.28
+        - -9.152
+        - -9.0241
+      lengths:
+        - 200
+        - 200
+        - 100.08611098489831
+  - pipeseg:
+      name: DGtoLX12-067
+      length: 9.44889411518618
+      elevation: -8.96
+      diameters:
+        - 0.2794
+        - 0.3302
+        - 0.3826
+  - pipeseg:
+      name: DGtoLX12-068
+      length: 29.637982387470306
+      elevation: 27.9
+      diameters:
+        - 0.2794
+        - 0.3302
+        - 0.3826
+  - pipeseg:
+      name: DGtoLX12-069
+      length: 34.32797692844715
+      elevation: 27.9
+      diameters:
+        - 0.2794
+        - 0.3302
+        - 0.3826
+  - well:
+      name: LX1
+      physical:
+        elevation: 27.9
+      realReservoirName: Lennox
+  - reservoir:
+      name: Lennox
+      physical:
+        elevation: 0
+      pressure: 4000000

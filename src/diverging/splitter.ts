@@ -62,7 +62,7 @@ export default class Splitter extends Transport {
     let mid = 0;
 
     let guesses = 0;
-    const maxGuesses = 30;
+    const maxGuesses = 25;
 
     let pressureSolution = PressureSolution.Low;
 

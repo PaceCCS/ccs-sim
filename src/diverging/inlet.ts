@@ -11,13 +11,10 @@ import {
 } from 'physical-quantities';
 
 export default class Inlet extends Transport {
-  destination: IElement | null;
   temperature: Temperature = new Temperature(10, TemperatureUnits.Kelvin);
 
   constructor(name: string, physical: IPhysicalElement) {
     super(name, physical, 'Inlet');
-
-    this.destination = null;
   }
 
   async applyInletProperties(
@@ -63,11 +60,13 @@ export default class Inlet extends Transport {
 
       mid = (low + high) / 2;
 
-      pressureSolution = (await this.applyInletProperties(
-        new Pressure(mid, PressureUnits.Pascal),
-        this.temperature,
-        this.fluid.flowrate,
-      )) as PressureSolution;
+      pressureSolution = (
+        await this.applyInletProperties(
+          new Pressure(mid, PressureUnits.Pascal),
+          this.temperature,
+          this.fluid.flowrate,
+        )
+      )?.pressureSolution as PressureSolution;
 
       if (pressureSolution === PressureSolution.Low) {
         low = mid;
@@ -87,8 +86,14 @@ export default class Inlet extends Transport {
     dest.source = this;
   }
 
-  async process(fluid: Fluid): Promise<PressureSolution> {
-    if (!this.destination) return PressureSolution.Ok;
+  async process(
+    fluid: Fluid,
+  ): Promise<{ pressureSolution: PressureSolution; pressure: Pressure }> {
+    if (!this.destination)
+      return {
+        pressureSolution: PressureSolution.Ok,
+        pressure: fluid.pressure,
+      };
 
     return await this.destination.process(fluid);
   }

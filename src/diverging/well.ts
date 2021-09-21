@@ -46,7 +46,7 @@ const wellFunctions = {
 };
 
 export default class Well extends Analogue {
-  destination: IElement | null;
+  destination?: IElement;
 
   constructor(
     name: string,
@@ -54,7 +54,6 @@ export default class Well extends Analogue {
     realWell: RealReservoir,
   ) {
     super(name, physical, 'Well', wellFunctions[realWell]);
-    this.destination = null;
   }
 
   get x() {

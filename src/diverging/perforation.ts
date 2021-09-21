@@ -49,15 +49,12 @@ const perforationFunctions = {
 };
 
 export default class Perforation extends Analogue {
-  destination: Reservoir | null;
-
   constructor(
     name: string,
     physical: IPhysicalElement,
     realReservoir: RealReservoir,
   ) {
     super(name, physical, 'Well', perforationFunctions[realReservoir]);
-    this.destination = null;
   }
 
   get x() {

@@ -15,7 +15,7 @@ export default class Reservoir implements IElement {
   physical: IPhysicalElement;
   pressure: Pressure;
   fluid?: Fluid;
-  source?: Perforation;
+  source?: IElement;
 
   constructor(name: string, physical: IPhysicalElement, pressure: Pressure) {
     this.name = name;
@@ -23,7 +23,9 @@ export default class Reservoir implements IElement {
     this.pressure = pressure;
   }
 
-  async process(fluid: Fluid): Promise<PressureSolution> {
+  async process(
+    fluid: Fluid,
+  ): Promise<{ pressureSolution: PressureSolution; pressure: Pressure }> {
     if (!fluid) {
       throw new Error(`No fluid received`);
     }
@@ -34,12 +36,21 @@ export default class Reservoir implements IElement {
 
     return await (() => {
       if (fluid.pressure.pascal < lower) {
-        return PressureSolution.Low;
+        return {
+          pressureSolution: PressureSolution.Low,
+          pressure: this.fluid.pressure,
+        };
       }
       if (fluid.pressure.pascal > upper) {
-        return PressureSolution.High;
+        return {
+          pressureSolution: PressureSolution.High,
+          pressure: this.fluid.pressure,
+        };
       }
-      return PressureSolution.Ok;
+      return {
+        pressureSolution: PressureSolution.Ok,
+        pressure: this.fluid.pressure,
+      };
     })();
   }
 }

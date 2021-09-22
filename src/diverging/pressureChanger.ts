@@ -1,12 +1,13 @@
 import { Pressure, Temperature, TemperatureUnits } from 'physical-quantities';
 import Fluid from './fluid';
-import { IPhysicalElement, PressureSolution } from './element';
+import IElement, { IPhysicalElement, PressureSolution } from './element';
 import Transport from './transport';
 import binaryTargetSearch from '../utils/binaryTargetSearch';
 import { defaultFluidConstructor } from './fluid';
 
 export default class PressureChanger extends Transport {
   outputPressure: Pressure;
+  destination: IElement | null;
 
   constructor(
     name: string,
@@ -15,6 +16,12 @@ export default class PressureChanger extends Transport {
   ) {
     super(name, physical, 'PressureChanger');
     this.outputPressure = outputPressure;
+    this.destination = null;
+  }
+
+  setDestination(dest: IElement): void {
+    this.destination = dest;
+    dest.source = this;
   }
 
   async getNewFluid() {
@@ -49,6 +56,12 @@ export default class PressureChanger extends Transport {
   }
 
   async process(fluid: Fluid): Promise<PressureSolution> {
-    return PressureSolution.Ok;
+    this.fluid = fluid;
+
+    if (!this.destination) return PressureSolution.Ok;
+
+    const newFluid = await this.getNewFluid();
+
+    return await this.destination.process(newFluid);
   }
 }

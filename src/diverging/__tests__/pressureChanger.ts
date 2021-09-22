@@ -8,6 +8,7 @@ import {
   Flowrate,
   FlowrateUnits,
 } from 'physical-quantities';
+import PipeSeg from '../pipeSeg';
 
 describe('new fluid creation', () => {
   it('should have the same enthalpy as the received fluid', async () => {
@@ -23,10 +24,17 @@ describe('new fluid creation', () => {
       new Pressure(3000000, PressureUnits.Pascal),
     );
 
-    pChanger.fluid = incomingFluid;
+    const destination = new PipeSeg({
+      length: 200,
+      diameters: [0.9144],
+      elevation: 0,
+      name: 'attached-to-valve',
+    });
 
-    const newFluid = await pChanger.getNewFluid();
+    pChanger.setDestination(destination);
 
-    expect(newFluid.enthalpy).toBeCloseTo(incomingFluid.enthalpy, 1);
+    await pChanger.process(incomingFluid);
+
+    expect(destination.fluid!.enthalpy).toBeCloseTo(incomingFluid.enthalpy, 1);
   });
 });

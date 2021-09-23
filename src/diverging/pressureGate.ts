@@ -1,9 +1,8 @@
-import { Pressure, Temperature, TemperatureUnits } from 'physical-quantities';
 import Fluid from './fluid';
 import IElement, { IPhysicalElement, PressureSolution } from './element';
 import Transport from './transport';
-import binaryTargetSearch from '../utils/binaryTargetSearch';
 import { defaultFluidConstructor } from './fluid';
+import { Pressure, PressureUnits } from 'physical-quantities';
 
 export default class PressureGate extends Transport {
   inputPressure: Pressure;
@@ -22,6 +21,50 @@ export default class PressureGate extends Transport {
   setDestination(dest: IElement): void {
     this.destination = dest;
     dest.source = this;
+  }
+
+  async searchPressure() {
+    if (!this.fluid) {
+      throw new Error(`No fluid`);
+    }
+    if (!this.destination) {
+      throw new Error(`No destination`);
+    }
+    const lowLimit = new Pressure(1, PressureUnits.Bara);
+    const highLimit = this.fluid.pressure;
+
+    let low = lowLimit.pascal;
+    let high = highLimit.pascal;
+    let mid = 0;
+
+    let guesses = 0;
+    const maxGuesses = 25;
+
+    let pressureSolution = PressureSolution.Low;
+
+    while (pressureSolution !== PressureSolution.Ok) {
+      if (guesses++ > maxGuesses - 1) {
+        break;
+      }
+
+      mid = (low + high) / 2;
+
+      pressureSolution = await this.destination.process(
+        await defaultFluidConstructor(
+          new Pressure(mid, PressureUnits.Pascal),
+          this.fluid.temperature,
+          this.fluid.flowrate,
+        ),
+      );
+
+      if (pressureSolution === PressureSolution.Low) {
+        low = mid;
+      } else if (pressureSolution === PressureSolution.High) {
+        high = mid;
+      }
+    }
+
+    return pressureSolution;
   }
 
   async process(fluid: Fluid): Promise<PressureSolution> {
@@ -43,7 +86,7 @@ export default class PressureGate extends Transport {
         return PressureSolution.High;
       }
       if (!this.destination) return PressureSolution.Ok;
-      return await this.destination.process(fluid);
+      return await this.searchPressure();
     })();
   }
 }

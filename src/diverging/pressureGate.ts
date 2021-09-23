@@ -85,7 +85,6 @@ export default class PressureGate extends Transport {
       if (fluid.pressure.pascal > upper) {
         return PressureSolution.High;
       }
-      if (!this.destination) return PressureSolution.Ok;
       return await this.searchPressure();
     })();
   }

@@ -6,7 +6,11 @@ interface ITransport extends IElement {
   name: string;
   process(
     fluid: Fluid,
-  ): Promise<{ pressureSolution: PressureSolution; pressure: Pressure }>;
+  ): Promise<{
+    pressureSolution: PressureSolution;
+    pressure: Pressure;
+    target: null | Pressure;
+  }>;
 }
 
 export default abstract class Transport implements ITransport {
@@ -25,5 +29,9 @@ export default abstract class Transport implements ITransport {
 
   abstract process(
     fluid: Fluid,
-  ): Promise<{ pressureSolution: PressureSolution; pressure: Pressure }>;
+  ): Promise<{
+    pressureSolution: PressureSolution;
+    pressure: Pressure;
+    target: null | Pressure;
+  }>;
 }

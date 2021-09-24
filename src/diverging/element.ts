@@ -8,7 +8,11 @@ export default interface IElement {
   // Returns pressure delta between end and passed
   process(
     fluid: Fluid,
-  ): Promise<{ pressureSolution: PressureSolution; pressure: Pressure }>;
+  ): Promise<{
+    pressureSolution: PressureSolution;
+    pressure: Pressure;
+    target: null | Pressure;
+  }>;
 }
 
 export interface IPhysicalElement {

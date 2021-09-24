@@ -75,13 +75,16 @@ export default class Analogue extends Transport {
     dest.source = this;
   }
 
-  async process(
-    fluid: Fluid,
-  ): Promise<{ pressureSolution: PressureSolution; pressure: Pressure }> {
+  async process(fluid: Fluid): Promise<{
+    pressureSolution: PressureSolution;
+    pressure: Pressure;
+    target: null | Pressure;
+  }> {
     if (!this.destination)
       return {
         pressureSolution: PressureSolution.Ok,
         pressure: fluid.pressure,
+        target: null,
       };
 
     this.fluid = fluid;
@@ -89,7 +92,11 @@ export default class Analogue extends Transport {
     const p = this.endPressure();
     const lowPressureLimit = new Pressure(1000, PressureUnits.Pascal).pascal;
     if (p.pascal < lowPressureLimit)
-      return { pressureSolution: PressureSolution.Low, pressure: p };
+      return {
+        pressureSolution: PressureSolution.Low,
+        pressure: p,
+        target: null,
+      };
 
     const endFluid = await defaultFluidConstructor(
       p,

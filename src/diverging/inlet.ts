@@ -86,13 +86,16 @@ export default class Inlet extends Transport {
     dest.source = this;
   }
 
-  async process(
-    fluid: Fluid,
-  ): Promise<{ pressureSolution: PressureSolution; pressure: Pressure }> {
+  async process(fluid: Fluid): Promise<{
+    pressureSolution: PressureSolution;
+    pressure: Pressure;
+    target: null | Pressure;
+  }> {
     if (!this.destination)
       return {
         pressureSolution: PressureSolution.Ok,
         pressure: fluid.pressure,
+        target: null,
       };
 
     return await this.destination.process(fluid);

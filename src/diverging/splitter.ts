@@ -35,7 +35,11 @@ export default class Splitter extends Transport {
   async applyFlowrate(
     branch: number,
     flowrate: Flowrate,
-  ): Promise<{ pressureSolution: PressureSolution; pressure: Pressure }> {
+  ): Promise<{
+    pressureSolution: PressureSolution;
+    pressure: Pressure;
+    target: null | Pressure;
+  }> {
     if (!this.fluid) {
       throw new Error(
         'Splitter has no fluid - unable to calculate end pressure',
@@ -96,35 +100,6 @@ export default class Splitter extends Transport {
   }
 
   async searchBranchFlowrateWithTarget(branchNum: number, fluid: Fluid) {
-    const getTerminalElem = (
-      elem: Transport | Reservoir,
-    ): Transport | Reservoir => {
-      if (elem instanceof Splitter) {
-        return getTerminalElem(elem.destinations[elem.destinations.length - 1]);
-      }
-      if (elem instanceof Reservoir || !elem.destination) {
-        return elem;
-      }
-      return getTerminalElem(elem);
-    };
-
-    const branch = this.destinations[branchNum];
-
-    const getReservoir = (): Reservoir | undefined => {
-      const reservoir = getTerminalElem(branch) as Transport | Reservoir;
-      if (!(reservoir instanceof Reservoir)) return;
-      return reservoir;
-    };
-
-    const getTarget = (): Pressure => {
-      const reservoir = getReservoir();
-      if (!reservoir) {
-        throw new Error(`No reservoir at the end of branch ${branchNum}`);
-      }
-      return reservoir.pressure;
-    };
-
-    const target = getTarget().bara;
     let low = 0;
     let high = fluid.flowrate.kgps;
     let mid = 0;
@@ -157,12 +132,7 @@ export default class Splitter extends Transport {
       prevGuess.high = Math.max(prevGuess.high, p.bara);
       prevGuess.low = Math.min(prevGuess.low, p.bara);
 
-      mid =
-        low +
-        Math.floor(
-          ((high - low) / (prevGuess.high - prevGuess.low)) *
-            (target - prevGuess.low),
-        );
+      mid = (low + high) / 2;
 
       pressureSolution = pSol;
 
@@ -176,9 +146,11 @@ export default class Splitter extends Transport {
     return { flowrate: mid, pressureSolution };
   }
 
-  async process(
-    fluid: Fluid,
-  ): Promise<{ pressureSolution: PressureSolution; pressure: Pressure }> {
+  async process(fluid: Fluid): Promise<{
+    pressureSolution: PressureSolution;
+    pressure: Pressure;
+    target: null | Pressure;
+  }> {
     this.fluid = fluid;
 
     const lowPressureLimit = new Pressure(1000, PressureUnits.Pascal).pascal;
@@ -186,6 +158,7 @@ export default class Splitter extends Transport {
       return {
         pressureSolution: PressureSolution.Low,
         pressure: this.fluid.pressure,
+        target: null,
       };
 
     const newFluid = await defaultFluidConstructor(
@@ -199,7 +172,11 @@ export default class Splitter extends Transport {
         await this.searchBranchFlowrateWithTarget(i, newFluid);
 
       if (pressureSolution !== PressureSolution.Ok) {
-        return { pressureSolution, pressure: this.fluid.pressure };
+        return {
+          pressureSolution,
+          pressure: this.fluid.pressure,
+          target: null,
+        };
       }
       newFluid.flowrate = new Flowrate(
         newFluid.flowrate.kgps - flowrate,

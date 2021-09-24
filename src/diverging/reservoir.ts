@@ -23,9 +23,11 @@ export default class Reservoir implements IElement {
     this.pressure = pressure;
   }
 
-  async process(
-    fluid: Fluid,
-  ): Promise<{ pressureSolution: PressureSolution; pressure: Pressure }> {
+  async process(fluid: Fluid): Promise<{
+    pressureSolution: PressureSolution;
+    pressure: Pressure;
+    target: null | Pressure;
+  }> {
     if (!fluid) {
       throw new Error(`No fluid received`);
     }
@@ -39,17 +41,20 @@ export default class Reservoir implements IElement {
         return {
           pressureSolution: PressureSolution.Low,
           pressure: this.fluid.pressure,
+          target: this.pressure,
         };
       }
       if (fluid.pressure.pascal > upper) {
         return {
           pressureSolution: PressureSolution.High,
           pressure: this.fluid.pressure,
+          target: this.pressure,
         };
       }
       return {
         pressureSolution: PressureSolution.Ok,
         pressure: this.fluid.pressure,
+        target: this.pressure,
       };
     })();
   }

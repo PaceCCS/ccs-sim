@@ -65,6 +65,19 @@ export default class Splitter extends Transport {
     let high = fluid.flowrate.kgps;
     let mid = 0;
 
+    const calculatedPressureBoundaries = {
+      highFlowrate: (await this.applyFlowrate(branch, fluid.flowrate)).pressure
+        .bara,
+      lowFlowrate: (
+        await this.applyFlowrate(branch, new Flowrate(0, FlowrateUnits.Kgps))
+      ).pressure.bara,
+    };
+
+    const target = await this.getBranchTarget(branch, fluid);
+    if (!target) {
+      throw new Error(`Unable to find target pressure for branch ${branch}`);
+    }
+
     let guesses = 0;
     const maxGuesses = 25;
 
@@ -76,6 +89,13 @@ export default class Splitter extends Transport {
       }
 
       mid = (low + high) / 2;
+
+      mid =
+        low +
+        ((high - low) /
+          (calculatedPressureBoundaries.highFlowrate -
+            calculatedPressureBoundaries.lowFlowrate)) *
+          (target.pressure.bara - calculatedPressureBoundaries.lowFlowrate);
 
       if (mid >= fluid.flowrate.kgps * 0.9) {
         return { flowrate: mid, pressureSolution };
@@ -99,7 +119,7 @@ export default class Splitter extends Transport {
     return { flowrate: mid, pressureSolution };
   }
 
-  async searchBranchFlowrateWithTarget(branchNum: number, fluid: Fluid) {
+  async getBranchTarget(branchNum: number, fluid: Fluid) {
     let low = 0;
     let high = fluid.flowrate.kgps;
     let mid = 0;
@@ -108,29 +128,21 @@ export default class Splitter extends Transport {
     let guesses = 0;
     const maxGuesses = 25;
 
-    const prevGuess = {
-      high: 0,
-      low: high,
-    };
-
     while (pressureSolution !== PressureSolution.Ok) {
       if (guesses++ > maxGuesses - 1) {
         break;
       }
-      if (mid >= fluid.flowrate.kgps * 0.9) {
-        return { flowrate: mid, pressureSolution };
-      }
-      if (mid <= new Flowrate(0.001, FlowrateUnits.Kgps).kgps) {
-        return { flowrate: mid, pressureSolution: PressureSolution.Low };
-      }
 
-      const { pressureSolution: pSol, pressure: p } = await this.applyFlowrate(
+      const {
+        pressureSolution: pSol,
+        pressure,
+        target,
+      } = await this.applyFlowrate(
         branchNum,
         new Flowrate(mid, FlowrateUnits.Kgps),
       );
 
-      prevGuess.high = Math.max(prevGuess.high, p.bara);
-      prevGuess.low = Math.min(prevGuess.low, p.bara);
+      if (target) return { pressureSolution: pSol, pressure, target };
 
       mid = (low + high) / 2;
 
@@ -142,8 +154,6 @@ export default class Splitter extends Transport {
         low = mid;
       }
     }
-
-    return { flowrate: mid, pressureSolution };
   }
 
   async process(fluid: Fluid): Promise<{
@@ -168,8 +178,10 @@ export default class Splitter extends Transport {
     );
 
     for (let i = 0; i < this.destinations.length - 1; i++) {
-      const { flowrate, pressureSolution } =
-        await this.searchBranchFlowrateWithTarget(i, newFluid);
+      const { flowrate, pressureSolution } = await this.searchBranchFlowrate(
+        i,
+        newFluid,
+      );
 
       if (pressureSolution !== PressureSolution.Ok) {
         return {

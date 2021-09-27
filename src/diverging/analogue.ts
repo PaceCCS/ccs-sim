@@ -13,7 +13,6 @@ export type ModelFunction = {
 
 export default class Analogue extends Transport {
   source?: IElement;
-  destination: IElement | null;
   modelFunction: ModelFunction;
 
   constructor(
@@ -23,8 +22,7 @@ export default class Analogue extends Transport {
     modelFunction: ModelFunction,
   ) {
     super(name, physical, type);
-
-    this.destination = null;
+    this.source = undefined;
     this.modelFunction = modelFunction;
   }
 
@@ -77,14 +75,28 @@ export default class Analogue extends Transport {
     dest.source = this;
   }
 
-  async process(fluid: Fluid): Promise<PressureSolution> {
-    if (!this.destination) return PressureSolution.Ok;
+  async process(fluid: Fluid): Promise<{
+    pressureSolution: PressureSolution;
+    pressure: Pressure;
+    target: null | Pressure;
+  }> {
+    if (!this.destination)
+      return {
+        pressureSolution: PressureSolution.Ok,
+        pressure: fluid.pressure,
+        target: null,
+      };
 
     this.fluid = fluid;
 
     const p = this.endPressure();
     const lowPressureLimit = new Pressure(1000, PressureUnits.Pascal).pascal;
-    if (p.pascal < lowPressureLimit) return PressureSolution.Low;
+    if (p.pascal < lowPressureLimit)
+      return {
+        pressureSolution: PressureSolution.Low,
+        pressure: p,
+        target: null,
+      };
 
     const endFluid = await defaultFluidConstructor(
       p,

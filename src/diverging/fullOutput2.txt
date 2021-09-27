@@ -1,0 +1,207 @@
+inletP: 7050000
+inletP: 7050000 | branch 0: 75.15 kg/s
+inletP: 7050000 | RES target: 35.50 Bara | received: 40.10 Bara
+inletP: 7050000 | branch 0: 112.73 kg/s
+inletP: 7050000 | RES target: 35.50 Bara | received: 30.66 Bara
+inletP: 7050000 | branch 0: 93.94 kg/s
+inletP: 7050000 | RES target: 35.50 Bara | received: 35.57 Bara
+inletP: 7050000 | branch 1: 28.18 kg/s
+inletP: 7050000 | RES target: 30.70 Bara | received: 44.12 Bara
+inletP: 7050000 | branch 1: 42.27 kg/s
+inletP: 7050000 | RES target: 30.70 Bara | received: 31.53 Bara
+inletP: 7050000 | branch 1: 49.32 kg/s
+inletP: 7050000 | RES target: 30.70 Bara | received: 24.10 Bara
+inletP: 7050000 | branch 1: 45.79 kg/s
+inletP: 7050000 | RES target: 30.70 Bara | received: 27.95 Bara
+inletP: 7050000 | branch 1: 44.03 kg/s
+inletP: 7050000 | RES target: 30.70 Bara | received: 29.77 Bara
+inletP: 7050000 | branch 1: 43.15 kg/s
+inletP: 7050000 | RES target: 30.70 Bara | received: 30.66 Bara
+inletP: 7050000 | branch 2: 13.21 kg/s
+inletP: 7050000 | RES target: 32.20 Bara | received: 43.81 Bara
+inletP: 3575000
+inletP: 5312500
+inletP: 6181250
+inletP: 6181250 | branch 0: 75.15 kg/s
+inletP: 6181250 | branch 0: 37.58 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 3.29 Bara
+inletP: 6181250 | branch 0: 18.79 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 7.99 Bara
+inletP: 6181250 | branch 0: 9.39 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 9.84 Bara
+inletP: 6181250 | branch 0: 4.70 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 10.65 Bara
+inletP: 6181250 | branch 0: 2.35 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 11.02 Bara
+inletP: 6181250 | branch 0: 1.17 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 11.20 Bara
+inletP: 6181250 | branch 0: 0.59 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 11.29 Bara
+inletP: 6181250 | branch 0: 0.29 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 11.33 Bara
+inletP: 6181250 | branch 0: 0.15 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 11.35 Bara
+inletP: 6181250 | branch 0: 0.07 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 11.36 Bara
+inletP: 6181250 | branch 0: 0.04 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 11.37 Bara
+inletP: 6181250 | branch 0: 0.02 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 11.37 Bara
+inletP: 6181250 | branch 0: 0.01 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 11.37 Bara
+inletP: 6181250 | branch 0: 0.00 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 11.37 Bara
+inletP: 6181250 | branch 0: 0.00 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 11.37 Bara
+inletP: 6181250 | branch 0: 0.00 kg/s
+inletP: 6181250 | RES target: 35.50 Bara | received: 11.37 Bara
+inletP: 6615625
+inletP: 6615625 | branch 0: 75.15 kg/s
+inletP: 6615625 | RES target: 35.50 Bara | received: 20.20 Bara
+inletP: 6615625 | branch 0: 37.58 kg/s
+inletP: 6615625 | RES target: 35.50 Bara | received: 29.55 Bara
+inletP: 6615625 | branch 0: 18.79 kg/s
+inletP: 6615625 | RES target: 35.50 Bara | received: 33.44 Bara
+inletP: 6615625 | branch 0: 9.39 kg/s
+inletP: 6615625 | RES target: 35.50 Bara | received: 35.22 Bara
+inletP: 6615625 | branch 1: 70.45 kg/s
+inletP: 6615625 | branch 1: 35.23 kg/s
+inletP: 6615625 | RES target: 30.70 Bara | received: 19.00 Bara
+inletP: 6615625 | branch 1: 17.61 kg/s
+inletP: 6615625 | RES target: 30.70 Bara | received: 35.79 Bara
+inletP: 6615625 | branch 1: 26.42 kg/s
+inletP: 6615625 | RES target: 30.70 Bara | received: 28.06 Bara
+inletP: 6615625 | branch 1: 22.02 kg/s
+inletP: 6615625 | RES target: 30.70 Bara | received: 32.05 Bara
+inletP: 6615625 | branch 1: 24.22 kg/s
+inletP: 6615625 | RES target: 30.70 Bara | received: 30.09 Bara
+inletP: 6615625 | branch 1: 23.12 kg/s
+inletP: 6615625 | RES target: 30.70 Bara | received: 31.08 Bara
+inletP: 6615625 | branch 1: 23.67 kg/s
+inletP: 6615625 | RES target: 30.70 Bara | received: 30.58 Bara
+inletP: 6615625 | branch 2: 117.24 kg/s
+inletP: 6615625 | RES target: 32.20 Bara | received: 13.42 Bara
+inletP: 6832812.5
+inletP: 6832812.5 | branch 0: 75.15 kg/s
+inletP: 6832812.5 | RES target: 35.50 Bara | received: 30.77 Bara
+inletP: 6832812.5 | branch 0: 37.58 kg/s
+inletP: 6832812.5 | RES target: 35.50 Bara | received: 39.44 Bara
+inletP: 6832812.5 | branch 0: 56.36 kg/s
+inletP: 6832812.5 | RES target: 35.50 Bara | received: 35.28 Bara
+inletP: 6832812.5 | branch 1: 46.97 kg/s
+inletP: 6832812.5 | RES target: 30.70 Bara | received: 15.98 Bara
+inletP: 6832812.5 | branch 1: 23.48 kg/s
+inletP: 6832812.5 | RES target: 30.70 Bara | received: 39.61 Bara
+inletP: 6832812.5 | branch 1: 35.23 kg/s
+inletP: 6832812.5 | RES target: 30.70 Bara | received: 29.08 Bara
+inletP: 6832812.5 | branch 1: 29.36 kg/s
+inletP: 6832812.5 | RES target: 30.70 Bara | received: 34.56 Bara
+inletP: 6832812.5 | branch 1: 32.29 kg/s
+inletP: 6832812.5 | RES target: 30.70 Bara | received: 31.88 Bara
+inletP: 6832812.5 | branch 1: 33.76 kg/s
+inletP: 6832812.5 | RES target: 30.70 Bara | received: 30.49 Bara
+inletP: 6832812.5 | branch 2: 60.18 kg/s
+inletP: 6832812.5 | RES target: 32.20 Bara | received: 35.16 Bara
+inletP: 6724218.75
+inletP: 6724218.75 | branch 0: 75.15 kg/s
+inletP: 6724218.75 | RES target: 35.50 Bara | received: 25.69 Bara
+inletP: 6724218.75 | branch 0: 37.58 kg/s
+inletP: 6724218.75 | RES target: 35.50 Bara | received: 34.64 Bara
+inletP: 6724218.75 | branch 0: 18.79 kg/s
+inletP: 6724218.75 | RES target: 35.50 Bara | received: 38.50 Bara
+inletP: 6724218.75 | branch 0: 28.18 kg/s
+inletP: 6724218.75 | RES target: 35.50 Bara | received: 36.61 Bara
+inletP: 6724218.75 | branch 0: 32.88 kg/s
+inletP: 6724218.75 | RES target: 35.50 Bara | received: 35.64 Bara
+inletP: 6724218.75 | branch 1: 58.71 kg/s
+inletP: 6724218.75 | branch 1: 29.36 kg/s
+inletP: 6724218.75 | RES target: 30.70 Bara | received: 30.01 Bara
+inletP: 6724218.75 | branch 1: 14.68 kg/s
+inletP: 6724218.75 | RES target: 30.70 Bara | received: 42.44 Bara
+inletP: 6724218.75 | branch 1: 22.02 kg/s
+inletP: 6724218.75 | RES target: 30.70 Bara | received: 36.52 Bara
+inletP: 6724218.75 | branch 1: 25.69 kg/s
+inletP: 6724218.75 | RES target: 30.70 Bara | received: 33.35 Bara
+inletP: 6724218.75 | branch 1: 27.52 kg/s
+inletP: 6724218.75 | RES target: 30.70 Bara | received: 31.71 Bara
+inletP: 6724218.75 | branch 1: 28.44 kg/s
+inletP: 6724218.75 | RES target: 30.70 Bara | received: 30.87 Bara
+inletP: 6724218.75 | branch 2: 88.98 kg/s
+inletP: 6724218.75 | RES target: 32.20 Bara | received: 26.71 Bara
+inletP: 6778515.625
+inletP: 6778515.625 | branch 0: 75.15 kg/s
+inletP: 6778515.625 | RES target: 35.50 Bara | received: 28.27 Bara
+inletP: 6778515.625 | branch 0: 37.58 kg/s
+inletP: 6778515.625 | RES target: 35.50 Bara | received: 37.07 Bara
+inletP: 6778515.625 | branch 0: 56.36 kg/s
+inletP: 6778515.625 | RES target: 35.50 Bara | received: 32.87 Bara
+inletP: 6778515.625 | branch 0: 46.97 kg/s
+inletP: 6778515.625 | RES target: 35.50 Bara | received: 35.02 Bara
+inletP: 6778515.625 | branch 0: 42.27 kg/s
+inletP: 6778515.625 | RES target: 35.50 Bara | received: 36.05 Bara
+inletP: 6778515.625 | branch 0: 44.62 kg/s
+inletP: 6778515.625 | RES target: 35.50 Bara | received: 35.54 Bara
+inletP: 6778515.625 | branch 1: 52.84 kg/s
+inletP: 6778515.625 | RES target: 30.70 Bara | received: 2.67 Bara
+inletP: 6778515.625 | branch 1: 26.42 kg/s
+inletP: 6778515.625 | RES target: 30.70 Bara | received: 34.94 Bara
+inletP: 6778515.625 | branch 1: 39.63 kg/s
+inletP: 6778515.625 | RES target: 30.70 Bara | received: 22.04 Bara
+inletP: 6778515.625 | branch 1: 33.02 kg/s
+inletP: 6778515.625 | RES target: 30.70 Bara | received: 28.86 Bara
+inletP: 6778515.625 | branch 1: 29.72 kg/s
+inletP: 6778515.625 | RES target: 30.70 Bara | received: 31.98 Bara
+inletP: 6778515.625 | branch 1: 31.37 kg/s
+inletP: 6778515.625 | RES target: 30.70 Bara | received: 30.44 Bara
+inletP: 6778515.625 | branch 2: 74.31 kg/s
+inletP: 6778515.625 | RES target: 32.20 Bara | received: 31.44 Bara
+inletP: 6805664.0625
+inletP: 6805664.0625 | branch 0: 75.15 kg/s
+inletP: 6805664.0625 | RES target: 35.50 Bara | received: 29.53 Bara
+inletP: 6805664.0625 | branch 0: 37.58 kg/s
+inletP: 6805664.0625 | RES target: 35.50 Bara | received: 38.26 Bara
+inletP: 6805664.0625 | branch 0: 56.36 kg/s
+inletP: 6805664.0625 | RES target: 35.50 Bara | received: 34.09 Bara
+inletP: 6805664.0625 | branch 0: 46.97 kg/s
+inletP: 6805664.0625 | RES target: 35.50 Bara | received: 36.22 Bara
+inletP: 6805664.0625 | branch 0: 51.67 kg/s
+inletP: 6805664.0625 | RES target: 35.50 Bara | received: 35.16 Bara
+inletP: 6805664.0625 | branch 1: 49.32 kg/s
+inletP: 6805664.0625 | RES target: 30.70 Bara | received: 11.10 Bara
+inletP: 6805664.0625 | branch 1: 24.66 kg/s
+inletP: 6805664.0625 | RES target: 30.70 Bara | received: 37.55 Bara
+inletP: 6805664.0625 | branch 1: 36.99 kg/s
+inletP: 6805664.0625 | RES target: 30.70 Bara | received: 26.11 Bara
+inletP: 6805664.0625 | branch 1: 30.82 kg/s
+inletP: 6805664.0625 | RES target: 30.70 Bara | received: 32.10 Bara
+inletP: 6805664.0625 | branch 1: 33.91 kg/s
+inletP: 6805664.0625 | RES target: 30.70 Bara | received: 29.19 Bara
+inletP: 6805664.0625 | branch 1: 32.36 kg/s
+inletP: 6805664.0625 | RES target: 30.70 Bara | received: 30.66 Bara
+inletP: 6805664.0625 | branch 2: 66.27 kg/s
+inletP: 6805664.0625 | RES target: 32.20 Bara | received: 33.55 Bara
+inletP: 6792089.84375
+inletP: 6792089.84375 | branch 0: 75.15 kg/s
+inletP: 6792089.84375 | RES target: 35.50 Bara | received: 28.91 Bara
+inletP: 6792089.84375 | branch 0: 37.58 kg/s
+inletP: 6792089.84375 | RES target: 35.50 Bara | received: 37.67 Bara
+inletP: 6792089.84375 | branch 0: 56.36 kg/s
+inletP: 6792089.84375 | RES target: 35.50 Bara | received: 33.48 Bara
+inletP: 6792089.84375 | branch 0: 46.97 kg/s
+inletP: 6792089.84375 | RES target: 35.50 Bara | received: 35.62 Bara
+inletP: 6792089.84375 | branch 1: 51.67 kg/s
+inletP: 6792089.84375 | RES target: 30.70 Bara | received: 6.22 Bara
+inletP: 6792089.84375 | branch 1: 25.83 kg/s
+inletP: 6792089.84375 | RES target: 30.70 Bara | received: 36.00 Bara
+inletP: 6792089.84375 | branch 1: 38.75 kg/s
+inletP: 6792089.84375 | RES target: 30.70 Bara | received: 23.64 Bara
+inletP: 6792089.84375 | branch 1: 32.29 kg/s
+inletP: 6792089.84375 | RES target: 30.70 Bara | received: 30.15 Bara
+inletP: 6792089.84375 | branch 1: 29.06 kg/s
+inletP: 6792089.84375 | RES target: 30.70 Bara | received: 33.14 Bara
+inletP: 6792089.84375 | branch 1: 30.68 kg/s
+inletP: 6792089.84375 | RES target: 30.70 Bara | received: 31.67 Bara
+inletP: 6792089.84375 | branch 1: 31.48 kg/s
+inletP: 6792089.84375 | RES target: 30.70 Bara | received: 30.91 Bara
+inletP: 6792089.84375 | branch 2: 71.85 kg/s
+inletP: 6792089.84375 | RES target: 32.20 Bara | received: 32.26 Bara

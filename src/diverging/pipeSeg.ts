@@ -12,24 +12,11 @@ export interface IPipeDefinition extends IPhysicalElement {
 
 export default class PipeSeg extends Transport {
   physical: IPipeDefinition;
-  _source: IElement | null;
-  destination: IElement | null;
 
   constructor(pipeDef: IPipeDefinition) {
     super(pipeDef.name, pipeDef, 'PipeSeg');
 
     this.physical = pipeDef;
-
-    this._source = null;
-    this.destination = null;
-  }
-
-  get source() {
-    return this._source as IElement;
-  }
-
-  set source(node: IElement) {
-    this._source = node;
   }
 
   get effectiveArea() {
@@ -100,16 +87,30 @@ export default class PipeSeg extends Transport {
     return new Pressure(capped, PressureUnits.Pascal);
   }
 
-  async process(fluid: Fluid): Promise<PressureSolution> {
+  async process(fluid: Fluid): Promise<{
+    pressureSolution: PressureSolution;
+    pressure: Pressure;
+    target: null | Pressure;
+  }> {
     this.fluid = fluid;
 
     // TODO: remove this after adding reservoirs to tests
-    if (!this.destination) return PressureSolution.Ok;
+    if (!this.destination)
+      return {
+        pressureSolution: PressureSolution.Ok,
+        pressure: this.fluid.pressure,
+        target: null,
+      };
 
     const p = this.endPressure();
     const lowPressureLimit = new Pressure(1000, PressureUnits.Pascal).pascal;
 
-    if (p.pascal < lowPressureLimit) return PressureSolution.Low;
+    if (p.pascal < lowPressureLimit)
+      return {
+        pressureSolution: PressureSolution.Low,
+        pressure: p,
+        target: null,
+      };
 
     const endFluid = await defaultFluidConstructor(
       p,

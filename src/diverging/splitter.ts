@@ -88,14 +88,12 @@ export default class Splitter extends Transport {
         break;
       }
 
-      mid = (low + high) / 2;
-
       mid =
         low +
         ((high - low) /
           (calculatedPressureBoundaries.highFlowrate -
             calculatedPressureBoundaries.lowFlowrate)) *
-          (target.pressure.bara - calculatedPressureBoundaries.lowFlowrate);
+          (target.target.bara - calculatedPressureBoundaries.lowFlowrate);
 
       if (mid >= fluid.flowrate.kgps * 0.9) {
         return { flowrate: mid, pressureSolution };

@@ -6,7 +6,6 @@ import { Pressure, PressureUnits } from 'physical-quantities';
 
 export default class PressureGate extends Transport {
   inputPressure: Pressure;
-  destination: IElement | null;
 
   constructor(
     name: string,
@@ -15,7 +14,6 @@ export default class PressureGate extends Transport {
   ) {
     super(name, physical, 'PressureGate');
     this.inputPressure = inputPressure;
-    this.destination = null;
   }
 
   setDestination(dest: IElement): void {
@@ -49,13 +47,15 @@ export default class PressureGate extends Transport {
 
       mid = (low + high) / 2;
 
-      pressureSolution = await this.destination.process(
-        await defaultFluidConstructor(
-          new Pressure(mid, PressureUnits.Pascal),
-          this.fluid.temperature,
-          this.fluid.flowrate,
-        ),
-      );
+      pressureSolution = (
+        await this.destination.process(
+          await defaultFluidConstructor(
+            new Pressure(mid, PressureUnits.Pascal),
+            this.fluid.temperature,
+            this.fluid.flowrate,
+          ),
+        )
+      ).pressureSolution;
 
       if (pressureSolution === PressureSolution.Low) {
         low = mid;
@@ -67,25 +67,47 @@ export default class PressureGate extends Transport {
     return pressureSolution;
   }
 
-  async process(fluid: Fluid): Promise<PressureSolution> {
+  async process(fluid: Fluid): Promise<{
+    pressureSolution: PressureSolution;
+    pressure: Pressure;
+    target: null | Pressure;
+  }> {
     if (!fluid) {
       throw new Error(`No fluid received`);
     }
     this.fluid = fluid;
 
-    if (!this.destination) return PressureSolution.Ok;
+    if (!this.destination)
+      return {
+        pressureSolution: PressureSolution.Ok,
+        pressure: this.fluid.pressure,
+        target: null,
+      };
 
     const upper = this.inputPressure.pascal * 1.01;
     const lower = this.inputPressure.pascal * 0.99;
 
     return await (async () => {
       if (fluid.pressure.pascal < lower) {
-        return PressureSolution.Low;
+        return {
+          pressureSolution: PressureSolution.Low,
+          pressure: fluid.pressure,
+          target: null,
+        };
       }
       if (fluid.pressure.pascal > upper) {
-        return PressureSolution.High;
+        return {
+          pressureSolution: PressureSolution.High,
+          pressure: fluid.pressure,
+          target: null,
+        };
       }
-      return await this.searchPressure();
+      const searchPResult = await this.searchPressure();
+      return {
+        pressureSolution: searchPResult,
+        pressure: fluid.pressure,
+        target: null,
+      };
     })();
   }
 }

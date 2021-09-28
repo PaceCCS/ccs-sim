@@ -7,7 +7,6 @@ import { defaultFluidConstructor } from './fluid';
 
 export default class PressureChanger extends Transport {
   outputPressure: Pressure;
-  destination: IElement | null;
 
   constructor(
     name: string,
@@ -16,7 +15,6 @@ export default class PressureChanger extends Transport {
   ) {
     super(name, physical, 'PressureChanger');
     this.outputPressure = outputPressure;
-    this.destination = null;
   }
 
   setDestination(dest: IElement): void {
@@ -55,10 +53,19 @@ export default class PressureChanger extends Transport {
     return fluid!;
   }
 
-  async process(fluid: Fluid): Promise<PressureSolution> {
+  async process(fluid: Fluid): Promise<{
+    pressureSolution: PressureSolution;
+    pressure: Pressure;
+    target: null | Pressure;
+  }> {
     this.fluid = fluid;
 
-    if (!this.destination) return PressureSolution.Ok;
+    if (!this.destination)
+      return {
+        pressureSolution: PressureSolution.Ok,
+        pressure: this.fluid.pressure,
+        target: null,
+      };
 
     const newFluid = await this.getNewFluid();
 

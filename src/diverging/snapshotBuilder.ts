@@ -14,6 +14,7 @@ import {
   Flowrate,
   FlowrateUnits,
 } from 'physical-quantities';
+import Valve from './valve';
 
 export default class SnapshotBuilder {
   elements: IElement[] = [];
@@ -88,8 +89,11 @@ export default class SnapshotBuilder {
     if (!Object.values(RealReservoir).includes(realReservoirName)) {
       throw new Error(`Unsupported reservoir: ${realReservoirName}`);
     }
-    if (!(this.previousElem instanceof PipeSeg)) {
-      throw new Error(`Well creation must come after pipe segment `);
+    if (
+      !(this.previousElem instanceof PipeSeg) ||
+      !(this.previousElem instanceof Valve)
+    ) {
+      throw new Error(`Well creation must come after pipe segment or valve`);
     }
     const well = new Well(name, physical, RealReservoir[realReservoirName]);
     this.previousElem.setDestination(well);
@@ -105,6 +109,16 @@ export default class SnapshotBuilder {
     well.setDestination(perforation);
 
     this.set(perforation, true);
+    return this;
+  }
+
+  addValve(name: string, physical: IPhysicalElement, inputPressure: Pressure) {
+    if (!(this.previousElem instanceof PipeSeg)) {
+      throw new Error(`Valve creation must come after pipe segment `);
+    }
+    const valve = new Valve(name, physical, inputPressure);
+    this.previousElem.setDestination(valve);
+    this.set(valve);
     return this;
   }
 

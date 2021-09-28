@@ -27,7 +27,7 @@ export default class PressureChanger extends Transport {
       throw new Error(`No incoming fluid`);
     }
 
-    const enthalpyTarget = this.fluid!.enthalpy;
+    const enthalpyTarget = this.fluid.enthalpy;
 
     const minT = -50;
     const maxT = 200;

@@ -84,30 +84,21 @@ export default class PressureGate extends Transport {
         target: null,
       };
 
-    const upper = this.inputPressure.pascal * 1.01;
     const lower = this.inputPressure.pascal * 0.99;
 
-    return await (async () => {
-      if (fluid.pressure.pascal < lower) {
-        return {
-          pressureSolution: PressureSolution.Low,
-          pressure: fluid.pressure,
-          target: null,
-        };
-      }
-      if (fluid.pressure.pascal > upper) {
-        return {
-          pressureSolution: PressureSolution.High,
-          pressure: fluid.pressure,
-          target: null,
-        };
-      }
-      const searchPResult = await this.searchPressure();
+    if (fluid.pressure.pascal < lower) {
       return {
-        pressureSolution: searchPResult,
+        pressureSolution: PressureSolution.Low,
         pressure: fluid.pressure,
         target: null,
       };
-    })();
+    }
+
+    const searchPResult = await this.searchPressure();
+    return {
+      pressureSolution: searchPResult,
+      pressure: fluid.pressure,
+      target: null,
+    };
   }
 }

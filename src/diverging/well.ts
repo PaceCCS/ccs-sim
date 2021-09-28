@@ -47,6 +47,7 @@ const wellFunctions = {
 
 export default class Well extends Analogue {
   destination?: IElement;
+  split: number;
 
   constructor(
     name: string,
@@ -54,6 +55,7 @@ export default class Well extends Analogue {
     realWell: RealReservoir,
   ) {
     super(name, physical, 'Well', wellFunctions[realWell]);
+    this.split = wellFunctions[realWell].split;
   }
 
   get x() {
@@ -61,7 +63,7 @@ export default class Well extends Analogue {
       throw new Error(`${this.type} has no fluid`);
     }
 
-    return this.fluid.flowrate.kgps / this.modelFunction.split;
+    return this.fluid.flowrate.kgps / this.split;
   }
 
   setDestination(dest: IElement) {

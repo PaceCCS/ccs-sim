@@ -90,7 +90,7 @@ export default class SnapshotBuilder {
       throw new Error(`Unsupported reservoir: ${realReservoirName}`);
     }
     if (
-      !(this.previousElem instanceof PipeSeg) ||
+      !(this.previousElem instanceof PipeSeg) &&
       !(this.previousElem instanceof Valve)
     ) {
       throw new Error(`Well creation must come after pipe segment or valve`);

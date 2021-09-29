@@ -23,7 +23,7 @@ describe('gate', () => {
     },
     {
       fluidPressure: new Pressure(71, PressureUnits.Bara),
-      expectedResult: PressureSolution.High,
+      expectedResult: PressureSolution.Ok,
     },
   ];
 
@@ -50,7 +50,7 @@ describe('gate', () => {
         new Flowrate(120, FlowrateUnits.Kgps),
       );
 
-      const result = await pGate.process(fluid);
+      const result = (await pGate.process(fluid)).pressureSolution;
 
       expect(result).toEqual(expectedResult);
     },

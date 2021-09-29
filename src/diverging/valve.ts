@@ -1,5 +1,5 @@
 import Fluid from './fluid';
-import { IPhysicalElement, PressureSolution } from './element';
+import IElement, { IPhysicalElement, PressureSolution } from './element';
 import Transport from './transport';
 import { defaultFluidConstructor } from './fluid';
 import {
@@ -20,6 +20,11 @@ export default class Valve extends Transport {
   ) {
     super(name, physical, 'Valve');
     this.inputPressure = inputPressure;
+  }
+
+  setDestination(dest: IElement): void {
+    this.destination = dest;
+    dest.source = this;
   }
 
   async searchPressure() {

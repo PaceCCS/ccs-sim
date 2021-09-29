@@ -4,9 +4,7 @@ import { Pressure } from 'physical-quantities';
 
 interface ITransport extends IElement {
   name: string;
-  process(
-    fluid: Fluid,
-  ): Promise<{
+  process(fluid: Fluid): Promise<{
     pressureSolution: PressureSolution;
     pressure: Pressure;
     target: null | Pressure;
@@ -27,9 +25,7 @@ export default abstract class Transport implements ITransport {
     this.type = type;
   }
 
-  abstract process(
-    fluid: Fluid,
-  ): Promise<{
+  abstract process(fluid: Fluid): Promise<{
     pressureSolution: PressureSolution;
     pressure: Pressure;
     target: null | Pressure;

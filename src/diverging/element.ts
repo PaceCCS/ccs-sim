@@ -6,9 +6,7 @@ export default interface IElement {
   type: string;
   source?: IElement;
   // Returns pressure delta between end and passed
-  process(
-    fluid: Fluid,
-  ): Promise<{
+  process(fluid: Fluid): Promise<{
     pressureSolution: PressureSolution;
     pressure: Pressure;
     target: null | Pressure;

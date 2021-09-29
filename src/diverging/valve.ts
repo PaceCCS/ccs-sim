@@ -1,5 +1,5 @@
 import Fluid from './fluid';
-import IElement, { IPhysicalElement, PressureSolution } from './element';
+import { IPhysicalElement, PressureSolution } from './element';
 import Transport from './transport';
 import { defaultFluidConstructor } from './fluid';
 import {

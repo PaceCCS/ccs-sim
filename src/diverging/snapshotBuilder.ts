@@ -112,11 +112,15 @@ export default class SnapshotBuilder {
     return this;
   }
 
-  addValve(name: string, physical: IPhysicalElement, inputPressure: Pressure) {
+  addValve(name: string, physical: IPhysicalElement, inputPressure: number) {
     if (!(this.previousElem instanceof PipeSeg)) {
       throw new Error(`Valve creation must come after pipe segment `);
     }
-    const valve = new Valve(name, physical, inputPressure);
+    const valve = new Valve(
+      name,
+      physical,
+      new Pressure(inputPressure, PressureUnits.Pascal),
+    );
     this.previousElem.setDestination(valve);
     this.set(valve);
     return this;

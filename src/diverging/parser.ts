@@ -389,6 +389,16 @@ export default class Parser {
               builder = builder.addPipeSeries(n, pipeDef, elevations, lengths);
             }
             break;
+          case 'valve':
+            {
+              const { name, physical, inputPressure } = parameters as {
+                name: string;
+                physical: IPhysicalElement;
+                inputPressure: number;
+              };
+              builder = builder.addValve(name, physical, inputPressure);
+            }
+            break;
           default:
             throw new Error(`${type} not supported`);
         }

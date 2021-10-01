@@ -5,6 +5,7 @@ import Splitter from '../splitter';
 import Well from '../well';
 import Perforation from '../perforation';
 import Reservoir from '../reservoir';
+import Valve from '../valve';
 
 describe('readFile', () => {
   it('should read a .yml input file', () => {
@@ -37,6 +38,18 @@ describe('build from .yml', () => {
 
     expect(root).toBeInstanceOf(Inlet);
     expect((root as Inlet).destination).toBeInstanceOf(PipeSeg);
+  });
+
+  it('should create a simple network with a valve', async () => {
+    const parser = new Parser();
+    parser.readFile(`${__dirname}/inputFiles/inletAndPipeSegAndValve.yml`);
+    const root = await parser.build();
+
+    expect(root).toBeInstanceOf(Inlet);
+    expect((root as Inlet).destination).toBeInstanceOf(PipeSeg);
+    expect(((root as Inlet).destination as PipeSeg).destination).toBeInstanceOf(
+      Valve,
+    );
   });
 
   it('should create a more complex network (twosplit)', async () => {

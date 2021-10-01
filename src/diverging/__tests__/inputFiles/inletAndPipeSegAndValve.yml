@@ -1,0 +1,20 @@
+--- # simple model
+instructions:
+  - inlet:
+      name: 'start'
+      physical:
+        elevation: 0
+  - pipeseg:
+      name: 'pipe1'
+      length: 200
+      elevation: 0
+      diameters:
+        - 1
+        - 2
+        - 3
+        - 4
+  - valve:
+      name: volvo
+      physical:
+        elevation: 0
+      pressure: 4000000

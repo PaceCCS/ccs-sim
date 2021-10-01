@@ -6,6 +6,7 @@ import Perforation from '../../perforation';
 import Reservoir from '../../reservoir';
 import Splitter from '../../splitter';
 import IElement from '../../element';
+import Valve from '../../valve';
 
 describe('add', () => {
   it('should create an inlet', async () => {
@@ -128,6 +129,20 @@ describe('add', () => {
     expect(((builder.previousElem as IElement).source as IElement).name).toBe(
       'HM-All',
     );
+  });
+
+  it('should create a valve', async () => {
+    const builder = new SnapshotBuilder()
+      .addInlet('start', { elevation: 0 })
+      .addPipeSeg({
+        name: 'p',
+        elevation: 0,
+        length: 200,
+        diameters: [1, 2, 3, 4],
+      })
+      .addValve('volvo', { elevation: 0 }, 7000000);
+
+    expect(builder.previousElem).toBeInstanceOf(Valve);
   });
 });
 

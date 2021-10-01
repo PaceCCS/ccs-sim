@@ -10,6 +10,7 @@ export default class Fluid {
   viscosity: number;
   density: number;
   enthalpy: number;
+  entropy: number;
 
   constructor(
     pressure: Pressure,
@@ -18,6 +19,7 @@ export default class Fluid {
     density: number,
     viscosity: number,
     enthalpy: number,
+    entropy: number,
   ) {
     this.pressure = pressure;
     this.temperature = temperature;
@@ -25,6 +27,7 @@ export default class Fluid {
     this.density = density;
     this.viscosity = viscosity;
     this.enthalpy = enthalpy;
+    this.entropy = entropy;
   }
 }
 
@@ -42,10 +45,11 @@ export const createNewFluidConstructorFromLocalFiles = (
     temperature: Temperature,
     flowrate: Flowrate,
   ) => {
-    const [density, viscosity, enthalpy] = [
+    const [density, viscosity, enthalpy, entropy] = [
       await properties.density(pressure, temperature),
       await properties.viscosity(pressure, temperature),
       await properties.enthalpy(pressure, temperature),
+      await properties.entropy(pressure, temperature),
     ];
 
     return new Fluid(
@@ -55,6 +59,7 @@ export const createNewFluidConstructorFromLocalFiles = (
       density,
       viscosity,
       enthalpy,
+      entropy,
     );
   };
 };

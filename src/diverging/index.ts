@@ -7,3 +7,5 @@ export { default as Reservoir } from './reservoir';
 export { default as SnapshotBuilder } from './snapshotBuilder';
 export { default as Splitter } from './splitter';
 export { default as Well } from './well';
+export { default as Valve } from './valve';
+export { default as Compressor } from './compressor';

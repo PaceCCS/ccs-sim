@@ -6,6 +6,8 @@ export type FluidDatum = [
   VISHL: number,
   ROG: number,
   ROHL: number,
+  SEG: number,
+  SEHL: number,
 ];
 
 export default class FluidData {

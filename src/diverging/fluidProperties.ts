@@ -237,6 +237,28 @@ export default class FluidProperties {
 
     return selectValuesAndAverage(points, colIdx, weights);
   }
+  async entropy(pressure: Pressure, temperature: Temperature) {
+    let phase = await this.phase(pressure, temperature);
+
+    if (phase === Phase.TwoPhase) {
+      // throw new Error('Fluid is two-phase')
+      phase = Phase.Gas;
+    }
+
+    let colIdx;
+
+    if (phase === Phase.Gas) colIdx = 7;
+    if (phase === Phase.Liquid) colIdx = 8;
+
+    if (!colIdx) colIdx = 7;
+
+    const { points, weights } = await this.searchNearbyPoints(
+      pressure,
+      temperature,
+    );
+
+    return selectValuesAndAverage(points, colIdx, weights);
+  }
 }
 
 export enum Phase {

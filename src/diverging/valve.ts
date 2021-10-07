@@ -73,6 +73,49 @@ export default class Valve extends Transport {
     return new Pressure(mid, PressureUnits.Pascal);
   }
 
+  async searchFluid() {
+    if (!this.fluid) {
+      throw new Error(`No fluid`);
+    }
+    if (!this.destination) {
+      throw new Error(`No destination`);
+    }
+    const lowLimit = new Pressure(1, PressureUnits.Bara);
+    const highLimit = this.fluid.pressure;
+
+    let low = lowLimit.pascal;
+    let high = highLimit.pascal;
+    let mid = 0;
+
+    let guesses = 0;
+    const maxGuesses = 25;
+
+    let pressureSolution = PressureSolution.Low;
+
+    let fluid: Fluid;
+
+    while (pressureSolution !== PressureSolution.Ok) {
+      if (guesses++ > maxGuesses - 1) {
+        break;
+      }
+
+      mid = (low + high) / 2;
+
+      fluid = await this.getNewFluid(new Pressure(mid, PressureUnits.Pascal));
+
+      pressureSolution = (await this.destination.process(fluid))
+        .pressureSolution;
+
+      if (pressureSolution === PressureSolution.Low) {
+        low = mid;
+      } else if (pressureSolution === PressureSolution.High) {
+        high = mid;
+      }
+    }
+
+    return fluid!;
+  }
+
   async getNewFluid(pressure: Pressure) {
     if (!this.fluid) {
       throw new Error(`No incoming fluid`);
@@ -131,8 +174,7 @@ export default class Valve extends Transport {
       };
     }
 
-    const newFluidPressure = await this.searchPressure();
-    const newFluid = await this.getNewFluid(newFluidPressure);
+    const newFluid = await this.searchFluid();
 
     return this.destination.process(newFluid);
   }
